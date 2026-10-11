@@ -1,0 +1,383 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zayn & Mike - Profile</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #050505;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+
+        /* NAVBAR */
+
+        header {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #b6ff00;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #b6ff00;
+        }
+
+
+        /* PROFILE */
+
+        .profile-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 70px auto;
+        }
+
+        .profile-box {
+            background: #101010;
+            border: 1px solid #b6ff00;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 25px rgba(182, 255, 0, 0.12);
+        }
+
+        .profile-title {
+            text-align: center;
+            color: #b6ff00;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .profile-subtitle {
+            text-align: center;
+            color: #999;
+            margin-bottom: 35px;
+        }
+
+        .profile-info {
+            border-top: 1px solid #292929;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px solid #292929;
+        }
+
+        .info-label {
+            color: #999;
+        }
+
+        .info-value {
+            color: white;
+            font-weight: bold;
+            text-align: right;
+            word-break: break-word;
+        }
+
+        .status {
+            color: #b6ff00;
+        }
+
+        .logout-btn {
+            width: 100%;
+            margin-top: 30px;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #b6ff00;
+            color: #050505;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            opacity: 0.85;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #b6ff00;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <a class="logo" href="xzaynmike.html">
+            ZAYN<span> & </span>MIKE
+        </a>
+
+        <nav>
+
+            <a href="xzaynmike.html#videos">VIDEOS</a>
+
+            <a href="xzaynmike.html#books">BOOKS</a>
+
+            <a href="xzaynmike.html#about">ABOUT</a>
+
+            <a href="xzaynmike.html#contact">CONTACT</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- PROFILE -->
+
+    <main class="profile-container">
+
+        <div class="profile-box">
+
+            <h1 class="profile-title">
+                PROFILE
+            </h1>
+
+            <p class="profile-subtitle">
+                Your Zayn & Mike account
+            </p>
+
+
+            <div class="profile-info">
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Username
+                    </span>
+
+                    <span
+                        class="info-value"
+                        id="username">
+                        Loading...
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Email
+                    </span>
+
+                    <span
+                        class="info-value"
+                        id="email">
+                        Loading...
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Account Status
+                    </span>
+
+                    <span
+                        class="info-value status">
+                        Signed In ✓
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn">
+                LOG OUT
+            </button>
+
+
+            <a
+                href="xzaynmike.html"
+                class="back-link">
+                ← Back to Zayn & Mike
+            </a>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FIREBASE -->
+
+    <script type="module">
+
+        import {
+            initializeApp
+        } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+
+        import {
+            getAuth,
+            onAuthStateChanged,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyAg1mUK15mtpqLqUc0QhDQ0m1xinu89-ixY",
+
+            authDomain: "zayn-and-mike.firebaseapp.com",
+
+            projectId: "zayn-and-mike",
+
+            storageBucket: "zayn-and-mike.firebasestorage.app",
+
+            messagingSenderId: "828342529884",
+
+            appId: "1:828342529884:web:edcef0839a640ad8869b99"
+
+        };
+
+
+        const app = initializeApp(firebaseConfig);
+
+        const auth = getAuth(app);
+
+
+        const usernameElement =
+            document.getElementById("username");
+
+        const emailElement =
+            document.getElementById("email");
+
+        const logoutBtn =
+            document.getElementById("logoutBtn");
+
+
+        /* Check Firebase login */
+
+        onAuthStateChanged(auth, function(user) {
+
+            if (!user) {
+
+                window.location.href =
+                    "xzaynmike.html";
+
+                return;
+            }
+
+
+            /* Show email */
+
+            emailElement.textContent =
+                user.email || "No email";
+
+
+            /*
+                Show the username saved
+                during account creation.
+            */
+
+            const savedUsername =
+                localStorage.getItem("loggedInUser");
+
+
+            usernameElement.textContent =
+                savedUsername || "User";
+
+        });
+
+
+        /* LOG OUT */
+
+        logoutBtn.addEventListener("click", async function() {
+
+            try {
+
+                await signOut(auth);
+
+                localStorage.removeItem("loggedInUser");
+
+                localStorage.removeItem("firebaseUserId");
+
+                window.location.href =
+                    "xzaynmike.html";
+
+            } catch (error) {
+
+                console.error(error);
+
+                alert("Could not log out. Please try again.");
+
+            }
+
+        });
+
+    </script>
+
+
+    <!-- SHARED AUTH -->
+
+    <script type="module" src="auth.js"></script>
+
+</body>
+
+</html>
+```
