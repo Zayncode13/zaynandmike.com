@@ -1,0 +1,3556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Official Zayn and Mike Website</title>
+<link rel="icon" type="image/png" href="C:\Users\ALOKO\Desktop\Vscode book\Zayn and Mike\z&m icon 3.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --lime: #b7ff24;
+  --ink: #080a0a;
+  --muted: #a5aaa5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080a0a;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* HEADER */
+
+header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  border-bottom: 1px solid #ffffff16;
+  background: #090b0bf2;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: blur(14px);
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 23px;
+  letter-spacing: -1.5px;
+}
+
+.logo span {
+  color: var(--lime);
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #d9ddd9;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--lime);
+}
+
+.button {
+  display: inline-block;
+  background: var(--lime);
+  color: #080a0a;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 13px 19px;
+  border-radius: 7px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 590px;
+  padding: 80px 7% 70px;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 30px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background: radial-gradient(
+    ellipse at 76% 40%,
+    #26331c 0%,
+    #10150e 34%,
+    #080a0a 70%
+  );
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--lime);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 8vw, 108px);
+  line-height: .88;
+  letter-spacing: -7px;
+  margin: 20px 0 24px;
+  font-weight: 900;
+}
+
+.hero h1 .z {
+  color: var(--lime);
+}
+
+.hero h1 .amp {
+  color: #737873;
+}
+
+.hero p {
+  color: #b9beb9;
+  max-width: 390px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.textlink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* AVATARS */
+
+.visual {
+  height: 430px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border: 1px solid #b7ff2433;
+  border-radius: 50%;
+  box-shadow: 0 0 90px #b7ff2410;
+}
+
+.orbit:before,
+.orbit:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #b7ff2420;
+  border-radius: 50%;
+  inset: 30px;
+}
+
+.orbit:after {
+  inset: 65px;
+}
+
+.avatar {
+  position: absolute;
+  width: 190px;
+  height: 290px;
+  bottom: 35px;
+  border-radius: 100px 100px 24px 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  filter: drop-shadow(0 20px 25px #0009);
+}
+
+.avatar.zayn {
+  left: 12%;
+  transform: rotate(-7deg);
+  z-index: 2;
+}
+
+.avatar.mike {
+  right: 10%;
+  transform: rotate(7deg);
+}
+
+.head {
+  width: 112px;
+  height: 112px;
+  border-radius: 45% 45% 42% 42%;
+  background: #c98e65;
+  position: relative;
+  margin-top: 8px;
+  border: 5px solid #171717;
+}
+
+.hair {
+  position: absolute;
+  top: -8px;
+  left: 4px;
+  width: 98px;
+  height: 43px;
+  background: #29221e;
+  border-radius: 50% 50% 20% 20%;
+  transform: rotate(-4deg);
+}
+
+.eyes {
+  position: absolute;
+  top: 54px;
+  left: 25px;
+  width: 8px;
+  height: 5px;
+  background: #171717;
+  border-radius: 50%;
+  box-shadow: 42px 0 #171717;
+}
+
+.smile {
+  position: absolute;
+  top: 76px;
+  left: 43px;
+  width: 23px;
+  height: 8px;
+  border-bottom: 3px solid #6f3026;
+  border-radius: 50%;
+}
+
+.body {
+  width: 160px;
+  height: 165px;
+  margin-top: -2px;
+  border-radius: 32px 32px 16px 16px;
+  position: relative;
+  box-shadow: inset 0 10px 0 #ffffff18;
+}
+
+.zayn .body {
+  background: linear-gradient(
+    135deg,
+    #c4ff49,
+    var(--lime) 55%,
+    #73b900
+  );
+}
+
+.mike .body {
+  background: linear-gradient(
+    135deg,
+    #333,
+    #090909 70%
+  );
+  border: 2px solid #454545;
+}
+
+.body:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 70px;
+  border: 7px solid #202820;
+  border-top: 0;
+  border-radius: 0 0 25px 25px;
+  opacity: .6;
+}
+
+.legs {
+  display: flex;
+  gap: 10px;
+  margin-top: -1px;
+}
+
+.legs i {
+  display: block;
+  width: 65px;
+  height: 105px;
+  background: #202321;
+  border-radius: 8px 8px 15px 15px;
+}
+
+.zayn .legs i:first-child {
+  background: #252a25;
+}
+
+.shoes {
+  display: flex;
+  gap: 18px;
+  margin-top: -2px;
+}
+
+.shoes i {
+  display: block;
+  width: 67px;
+  height: 17px;
+  background: #f5f5f0;
+  border-radius: 10px 16px 5px 5px;
+}
+
+.tag {
+  position: absolute;
+  padding: 9px 13px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  z-index: 3;
+}
+
+.tag.t1 {
+  top: 64px;
+  left: 6%;
+  background: var(--lime);
+  color: #080a0a;
+}
+
+.tag.t2 {
+  right: 0;
+  bottom: 60px;
+  background: #f3f3f3;
+  color: #090909;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  padding: 82px 7%;
+}
+
+.sectionhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  letter-spacing: -2px;
+  margin: 10px 0 0;
+}
+
+.sectionhead p {
+  color: var(--muted);
+  font-size: 12px;
+  max-width: 250px;
+  line-height: 1.6;
+}
+
+/* VIDEO CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.card {
+  border: 1px solid #ffffff17;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #111414;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #b7ff2477;
+}
+
+.thumb {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1d2b11, #101410);
+}
+
+.thumb.two {
+  background: linear-gradient(135deg, #272727, #101010);
+}
+
+.thumb.three {
+  background: linear-gradient(135deg, #292b14, #161813);
+}
+
+.thumb:before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 1px solid #ffffff22;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 25px #ffffff08,
+    0 0 0 50px #ffffff05;
+}
+
+.play {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--lime);
+  display: grid;
+  place-items: center;
+  color: #090909;
+  font-size: 18px;
+  z-index: 1;
+  padding-left: 3px;
+  box-shadow: 0 0 30px #b7ff2455;
+}
+
+.cardbody {
+  padding: 18px;
+}
+
+.cardbody small {
+  color: var(--lime);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+}
+
+.cardbody h3 {
+  margin: 9px 0 6px;
+  font-size: 17px;
+}
+
+.cardbody p {
+  margin: 0;
+  color: #9ca29c;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* BOOKSHELF */
+
+.books-section {
+  background: linear-gradient(180deg, #0b0e0c, #111511);
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.book-card {
+  background: #151916;
+  border: 1px solid #ffffff18;
+  border-radius: 12px;
+  padding: 14px;
+  overflow: hidden;
+  transition: transform .2s, border-color .2s;
+  box-shadow: 0 12px 28px #0005;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  border-color: #b7ff2488;
+}
+
+.book-cover {
+  height: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080a09;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.book-info {
+  padding: 14px 3px 3px;
+}
+
+.book-info small {
+  color: var(--lime);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+}
+
+.book-info h3 {
+  margin: 7px 0 0;
+  font-size: 16px;
+}
+
+.book-note {
+  color: #a5aaa5;
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-top: 8px;
+}
+
+/* ABOUT */
+
+.about {
+  background: #101311;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.aboutbox {
+  border: 1px solid #ffffff1c;
+  border-radius: 12px;
+  padding: 28px;
+  background: linear-gradient(135deg, #1b2515, #101211);
+}
+
+.aboutbox strong {
+  font-size: 40px;
+  color: var(--lime);
+  letter-spacing: -2px;
+}
+
+.aboutbox p {
+  color: #b7bcb7;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.pillrow {
+  display: flex;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.pill {
+  border: 1px solid #ffffff25;
+  border-radius: 30px;
+  padding: 8px 12px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pill.lime {
+  background: var(--lime);
+  color: #080a0a;
+  border-color: var(--lime);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #777d77;
+  font-size: 10px;
+  border-top: 1px solid #ffffff14;
+}
+
+footer b {
+  color: #fff;
+}
+
+.social {
+  display: flex;
+  gap: 18px;
+}
+
+footer a {
+  color: #b9beb9;
+  text-decoration: none;
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+  header {
+    padding: 0 5%;
+    height: 66px;
+  }
+
+  nav {
+    gap: 13px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .headerbtn {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 65px 6% 25px;
+  }
+
+  .hero h1 {
+    letter-spacing: -4px;
+  }
+
+  .visual {
+    height: 350px;
+  }
+
+  .orbit {
+    width: 300px;
+    height: 300px;
+  }
+
+  .avatar {
+    transform: scale(.82) !important;
+    bottom: 0;
+  }
+
+  .avatar.zayn {
+    left: 0;
+  }
+
+  .avatar.mike {
+    right: 0;
+  }
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .sectionhead {
+    display: block;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .book-cover {
+    height: 230px;
+  }
+
+  .thumb {
+    height: 175px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  footer {
+    padding: 25px 6%;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ================================
+   ZAYN & MIKE — LOGIN DESIGN
+   ================================ */
+
+.zm-login-section {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(182, 255, 0, 0.12), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(182, 255, 0, 0.08), transparent 30%),
+        #070807;
+}
+
+/* Decorative glow */
+.zm-login-section::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: rgba(182, 255, 0, 0.08);
+    filter: blur(100px);
+    top: -180px;
+    left: -180px;
+    pointer-events: none;
+}
+
+.zm-login-section::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(182, 255, 0, 0.06);
+    filter: blur(100px);
+    bottom: -180px;
+    right: -180px;
+    pointer-events: none;
+}
+
+/* LOGIN CARD */
+.zm-login {
+    width: 100%;
+    max-width: 430px;
+    padding: 42px 38px;
+    position: relative;
+    z-index: 2;
+
+    background: rgba(18, 20, 18, 0.82);
+    border: 1px solid rgba(182, 255, 0, 0.20);
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55),
+        0 0 45px rgba(182, 255, 0, 0.07);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+/* TOP LINE */
+.zm-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 76%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #b6ff00,
+        transparent
+    );
+    box-shadow: 0 0 18px rgba(182, 255, 0, 0.7);
+}
+
+/* TITLE */
+.zm-login h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.zm-login h2::after {
+    content: "ZAYN & MIKE";
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #b6ff00;
+}
+
+/* DESCRIPTION */
+.zm-login > p {
+    margin: 18px 0 30px;
+    text-align: center;
+    color: #929892;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* FORM FIELDS */
+.zm-login-field {
+    margin-bottom: 20px;
+}
+
+.zm-login-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #dce1dc;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.zm-login-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 16px;
+
+    border: 1px solid #292e29;
+    border-radius: 12px;
+
+    background: #0d0f0d;
+    color: #ffffff;
+
+    font-size: 15px;
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.zm-login-field input::placeholder {
+    color: #5d635d;
+}
+
+.zm-login-field input:focus {
+    border-color: #b6ff00;
+    background: #111411;
+
+    box-shadow:
+        0 0 0 3px rgba(182, 255, 0, 0.08),
+        0 0 20px rgba(182, 255, 0, 0.08);
+}
+
+/* SIGN IN BUTTON */
+.zm-login-button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #b6ff00;
+    color: #080a08;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.zm-login-button:hover {
+    background: #c5ff3d;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(182, 255, 0, 0.22),
+        0 0 20px rgba(182, 255, 0, 0.15);
+}
+
+.zm-login-button:active {
+    transform: translateY(0);
+}
+
+/* MESSAGE */
+.zm-login-message {
+    min-height: 20px;
+    margin: 15px 0 0 !important;
+
+    text-align: center;
+    font-size: 13px !important;
+    font-weight: 600;
+}
+
+/* CREATE ACCOUNT AREA */
+.zm-login-footer {
+    margin-top: 26px;
+    padding-top: 22px;
+
+    border-top: 1px solid #242824;
+
+    text-align: center;
+    color: #777d77;
+    font-size: 13px;
+}
+
+.zm-login-footer a {
+    color: #b6ff00;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 4px;
+
+    transition: color 0.2s ease;
+}
+
+.zm-login-footer a:hover {
+    color: #d2ff68;
+    text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .zm-login-section {
+        min-height: calc(100vh - 70px);
+        padding: 45px 16px;
+    }
+
+    .zm-login {
+        padding: 34px 24px;
+        border-radius: 20px;
+    }
+
+    .zm-login h2 {
+        font-size: 27px;
+    }
+
+    .zm-login-field input {
+        padding: 14px;
+    }
+}
+</style>
+</head>
+
+
+
+<body>
+
+<header>
+  <a class="logo" href="#" style="color:white;text-decoration:none">
+    ZAYN<span> & </span>MIKE
+  </a>
+
+  <nav>
+    <a href="#videos">VIDEOS</a>
+    <a href="#books">BOOKS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+  <a class="button headerbtn" href="#videos">WATCH NOW ↗</a>
+</header>
+
+<main>
+
+
+  
+<!-- HERO SECTION -->
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">THE OFFICIAL ZAYN & MIKE SITE</div>
+
+    <h1>
+      <span class="z">ZAYN</span><br>
+      <span class="amp">&</span> MIKE
+    </h1>
+
+    <p>
+      Two creators. Endless chaos.
+      Welcome to the official home of Zayn and Mike —
+      where the next adventure is always one click away.
+    </p>
+
+    <div class="actions">
+      <a class="button" href="#videos">EXPLORE VIDEOS ↗</a>
+      <a class="textlink" href="#about">MEET THE DUO ↓</a>
+    </div>
+  </div>
+
+  <div class="visual" aria-label="Illustrations of Zayn in lime and Mike in black">
+    <div class="orbit"></div>
+
+    <span class="tag t1">Youtuber</span>
+    <span class="tag t2">Youtuber</span>
+
+    <div class="avatar zayn">
+      <div class="head">
+        <div class="hair"></div>
+        <div class="eyes"></div>
+        <div class="smile"></div>
+      </div>
+
+      <div class="body"></div>
+
+      <div class="legs">
+        <i></i><i></i>
+      </div>
+
+      <div class="shoes">
+        <i></i><i></i>
+      </div>
+    </div>
+
+    <div class="avatar mike">
+      <div class="head">
+        <div class="hair"></div>
+        <div class="eyes"></div>
+        <div class="smile"></div>
+      </div>
+
+      <div class="body"></div>
+
+      <div class="legs">
+        <i></i><i></i>
+      </div>
+
+      <div class="shoes">
+        <i></i><i></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================
+     ZAYN & MIKE LOGIN
+     ================================ -->
+
+
+     
+<section class="zm-login-section">
+
+    <div class="zm-login">
+
+        <h2>SIGN IN</h2>
+
+        <p>
+            Welcome back to Zayn & Mike.
+            Sign in to access your account.
+        </p>
+
+        <form id="signinForm">
+
+            <div class="zm-login-field">
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+
+            <div class="zm-login-field">
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+
+            <button
+                class="zm-login-button"
+                type="submit"
+            >
+                SIGN IN
+            </button>
+
+
+            <p
+                id="message"
+                class="zm-login-message"
+            ></p>
+
+        </form>
+
+
+        <div class="zm-login-footer">
+            Don't have an account?
+
+            <a href="create account.html">
+                Create one
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zayn & Mike Bookshelf</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080a0a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --lime: #b7ff24;
+}
+
+/* BOOKSHELF SECTION */
+
+.books-section {
+  min-height: 100vh;
+  padding: 60px 7%;
+  background: linear-gradient(180deg, #0b0e0c, #111511);
+}
+
+.eyebrow {
+  color: var(--lime);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.sectionhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 35px;
+}
+
+.sectionhead h1 {
+  font-size: 45px;
+  margin: 10px 0 0;
+  letter-spacing: -2px;
+}
+
+.sectionhead p {
+  color: #a5aaa5;
+  font-size: 13px;
+}
+
+/* BOOK CARDS */
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.book-card {
+  background: #151916;
+  border: 1px solid #ffffff18;
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  color: white;
+  text-align: left;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--lime);
+}
+
+.book-cover {
+  height: 290px;
+  background: #080a09;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.book-info {
+  padding: 14px 3px 3px;
+}
+
+.book-info small {
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.book-info h3 {
+  margin: 7px 0 0;
+  font-size: 17px;
+}
+
+/* INDIVIDUAL BOOK DETAILS */
+
+.book-detail {
+  display: none;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 35px;
+  align-items: center;
+  background: #151916;
+  border: 1px solid #ffffff20;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 12px 28px #0005;
+}
+
+.book-detail.active {
+  display: grid;
+}
+
+.detail-cover {
+  height: 400px;
+  background: #080a09;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detail-copy h2 {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.detail-copy p {
+  color: #b9beb9;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.back-books {
+  padding: 12px 17px;
+  background: var(--lime);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.back-books:hover {
+  background: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .books-section {
+    padding: 40px 5%;
+  }
+
+  .sectionhead {
+    display: block;
+  }
+
+  .sectionhead h1 {
+    font-size: 34px;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .book-cover {
+    height: 220px;
+  }
+
+  .book-detail.active {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-cover {
+    height: 320px;
+  }
+
+  .detail-copy h2 {
+    font-size: 32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="books-section" id="books">
+
+  <div class="sectionhead">
+    <div>
+      <div class="eyebrow">ZAYN & MIKE</div>
+      <h1>Our Bookshelf<span style="color:#b7ff24">.</span></h1>
+    </div>
+    <p>Click a book to explore it.</p>
+  </div>
+
+  <!-- BOOKSHELF -->
+  <div class="book-grid" id="bookGrid">
+
+    <button class="book-card" data-book="elements">
+      <div class="book-cover">
+        <img src="C:\Users\ALOKO\Desktop\Vscode book\Zayn and Mike\Elements 78.jpg" alt="Elements">
+      </div>
+      <div class="book-info">
+        <small>BOOK COLLECTION</small>
+        <h3>Elements</h3>
+      </div>
+    </button>
+
+    <button class="book-card" data-book="disasters">
+      <div class="book-cover">
+        <img src="C:\Users\ALOKO\Downloads\LITTLE DISASTERS.jpg" alt="Little Disasters">
+      </div>
+      <div class="book-info">
+        <small>BOOK COLLECTION</small>
+        <h3>Little Disasters</h3>
+      </div>
+    </button>
+
+    <button class="book-card" data-book="science">
+      <div class="book-cover">
+        <img src="C:\Users\ALOKO\Desktop\Vscode book\Zayn and Mike\copy small 445.jpg" alt="Science Blast">
+      </div>
+      <div class="book-info">
+        <small>BOOK COLLECTION</small>
+        <h3>Science Blast</h3>
+      </div>
+    </button>
+
+    <button class="book-card" data-book="line">
+      <div class="book-cover">
+        <img src="C:\Users\ALOKO\Desktop\Vscode book\Zayn and Mike\The Line.jpg" alt="The Line">
+      </div>
+      <div class="book-info">
+        <small>BOOK COLLECTION</small>
+        <h3>The Line</h3>
+      </div>
+    </button>
+    
+    <button class="book-card" data-book="catastrophe">
+      <div class="book-cover">
+        <img src="C:\Users\ALOKO\Desktop\Vscode book\Zayn and Mike\Job Catastrophe.jpg" alt="Job Catastrophe">
+      </div>
+      <div class="book-info">
+        <small>BOOK COLLECTION</small>
+        <h3>Job Catastrophe</h3>
+      </div>
+    </button>
+    
+
+    <button class="book-card" data-book="adventure">
+      <div class="book-cover">
+        <img src="C:\Users\ALOKO\Desktop\Vscode book\Zayn and Mike\zayn mike adv tyler.jpg" alt="Tyler Greatest Adventure">
+      </div>
+      <div class="book-info">
+        <small>BOOK COLLECTION</small>
+        <h3>Tyler's Greatest Adventure</h3>
+      </div>
+    </button>
+ 
+  </div>
+
+  <!-- BOOK DETAILS PAGE -->
+  <div class="book-detail" id="bookDetail">
+
+    <div class="detail-cover">
+      <img id="detailImage" src="" alt="">
+    </div>
+
+    <div class="detail-copy">
+      <button class="back-books" id="backBooks">
+        ← BACK TO BOOKS
+      </button>
+
+      <div class="eyebrow">BOOK DETAILS</div>
+      <h2 id="detailTitle"></h2>
+      <p id="detailDescription"></p>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+// BOOK INFORMATION
+
+const books = {
+  elements: {
+    title: "Elements",
+    image: "C:/Users/ALOKO/Desktop/Vscode book/Zayn and Mike/Elements 78.jpg",
+    description: "Explore the world of elements in this exciting book. Discover its cover and learn more about the collection."
+  },
+
+  disasters: {
+    title: "Little Disasters",
+    image: "C:/Users/ALOKO/Downloads/LITTLE DISASTERS.jpg",
+    description: "A story with unexpected twists and surprising moments. Take a closer look at Little Disasters and discover what it has to offer."
+  },
+
+  science: {
+    title: "Science Blast",
+    image: "C:/Users/ALOKO/Desktop/Vscode book/Zayn and Mike/copy small 445.jpg",
+    description: "Explore science and discovery in this exciting book. Perfect for curious minds who love learning about the world."
+  },
+
+  line: {
+    title: "The Line",
+    image: "C:/Users/ALOKO/Desktop/Vscode book/Zayn and Mike/The Line.jpg",
+    description: "A mysterious title that leaves you wondering what lies beyond the line. Discover the book and its cover."
+  },
+
+  adventure: {
+    title: "Tyler's Greatest Adventure",
+    image: "C:/Users/ALOKO/Desktop/Vscode book/Zayn and Mike/zayn mike adv tyler.jpg",
+    description: "Join Tyler on his greatest adventure yet! This book is filled with excitement, challenges, and unforgettable moments."
+  },
+
+  catastrophe: {
+    title: "Job Catastrophe",
+    image: "C:/Users/ALOKO/Desktop/Vscode book/Zayn and Mike/Job Catastrophe.jpg",
+    description: "A story about the unexpected challenges that come with life and work. Take a closer look at Job Catastrophe and discover what it has to offer."
+  },
+};
+
+
+// GET HTML ELEMENTS
+
+const bookGrid = document.getElementById("bookGrid");
+const bookDetail = document.getElementById("bookDetail");
+const detailImage = document.getElementById("detailImage");
+const detailTitle = document.getElementById("detailTitle");
+const detailDescription = document.getElementById("detailDescription");
+const backBooks = document.getElementById("backBooks");
+
+// WHEN A BOOK IS CLICKED
+
+bookGrid.addEventListener("click", function(event) {
+  const card = event.target.closest("[data-book]");
+
+  if (!card) return;
+
+  const book = books[card.dataset.book];
+
+  if (!book) return;
+
+  detailImage.src = book.image;
+  detailImage.alt = book.title + " book cover";
+  detailTitle.textContent = book.title;
+  detailDescription.textContent = book.description;
+
+  // Hide all books
+  bookGrid.style.display = "none";
+
+  // Show the selected book
+  bookDetail.classList.add("active");
+
+  // Scroll to the details
+  bookDetail.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+});
+
+// BACK TO BOOKS BUTTON
+
+backBooks.addEventListener("click", function() {
+  bookDetail.classList.remove("active");
+  bookGrid.style.display = "grid";
+
+  bookGrid.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zayn & Mike | Chat Room</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: white;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background: #181818;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #b6ff00;
+}
+
+header h1 {
+    color: #b6ff00;
+    font-size: 30px;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+/* MAIN CHAT */
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.chat-box {
+    background: #1c1c1c;
+    border: 2px solid #b6ff00;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #b6ff0020;
+}
+
+/* CHAT HEADER */
+.chat-header {
+    background: #252525;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chat-header h2 {
+    color: #b6ff00;
+}
+
+.online {
+    color: #b6ff00;
+    font-size: 13px;
+}
+
+/* MESSAGES */
+.messages {
+    height: 420px;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    background: #303030;
+    padding: 12px;
+    border-radius: 10px;
+    max-width: 80%;
+    overflow-wrap: anywhere;
+}
+
+.message.mine {
+    background: #b6ff00;
+    color: black;
+    align-self: flex-end;
+}
+
+.message .name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #b6ff00;
+    margin-bottom: 6px;
+}
+
+.message.mine .name {
+    color: #222;
+}
+
+.message .text {
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.message .time {
+    font-size: 10px;
+    color: #aaa;
+    text-align: right;
+    margin-top: 6px;
+}
+
+.message.mine .time {
+    color: #444;
+}
+
+.empty {
+    text-align: center;
+    color: #888;
+    margin: auto;
+}
+
+/* INPUT AREA */
+.chat-input {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: #252525;
+    border-top: 1px solid #444;
+}
+
+.chat-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+.chat-input input:focus {
+    border-color: #b6ff00;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.send-btn {
+    background: #b6ff00;
+    color: black;
+}
+
+.send-btn:hover {
+    background: #9cdb00;
+}
+
+.clear-btn {
+    background: #e53935;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #c62828;
+}
+
+/* USER SETTINGS */
+.settings {
+    margin-top: 20px;
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #444;
+}
+
+.settings h3 {
+    color: #b6ff00;
+    margin-bottom: 15px;
+}
+
+.settings input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    background: #111;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.settings button {
+    background: #b6ff00;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+    .messages {
+        height: 380px;
+    }
+
+    .chat-input {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .chat-input button {
+        padding: 10px;
+    }
+
+    .message {
+        max-width: 90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ZAYN & MIKE</h1>
+    <p>Welcome to the community chat room!</p>
+</header>
+
+<div class="container">
+
+    <div class="chat-box">
+
+        <div class="chat-header">
+            <h2>💬 Zayn and Mike Chat Room</h2>
+            <span class="online">● Local Chat Room</span>
+        </div>
+
+        <div class="messages" id="messages">
+            <p class="empty">Welcome! Start a conversation.</p>
+        </div>
+
+        <form class="chat-input" id="chatForm">
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message..."
+                maxlength="500"
+                autocomplete="off"
+                required
+            >
+            <button class="send-btn" type="submit">Send</button>
+        </form>
+
+    </div>
+
+    <div class="settings">
+        <h3>⚙️ Chat Settings</h3>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Enter your chat username"
+            maxlength="20"
+        >
+
+        <button onclick="saveUsername()">Save Username</button>
+
+        <button class="clear-btn" onclick="clearChat()">
+            Clear Chat
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Zayn & Mike. All rights reserved.
+</footer>
+
+<script>
+const messagesBox = document.getElementById("messages");
+const messageInput = document.getElementById("messageInput");
+const chatForm = document.getElementById("chatForm");
+const usernameInput = document.getElementById("username");
+
+// Get the signed-in username, if available.
+let username =
+    localStorage.getItem("loggedInUser") || "Guest";
+
+usernameInput.value = username;
+
+// Load saved messages.
+let messages = JSON.parse(
+    localStorage.getItem("zaynMikeMessages") || "[]"
+);
+
+// Save messages to the browser.
+function saveMessages() {
+    localStorage.setItem(
+        "zaynMikeMessages",
+        JSON.stringify(messages)
+    );
+}
+
+// Display all messages.
+function displayMessages() {
+    messagesBox.innerHTML = "";
+
+    if (messages.length === 0) {
+        const empty = document.createElement("p");
+        empty.className = "empty";
+        empty.textContent = "No messages yet. Start chatting!";
+        messagesBox.appendChild(empty);
+        return;
+    }
+
+    messages.forEach(function(msg) {
+        const message = document.createElement("div");
+
+        message.className = "message";
+
+        if (msg.username === username) {
+            message.classList.add("mine");
+        }
+
+        const name = document.createElement("div");
+        name.className = "name";
+        name.textContent = msg.username;
+
+        const text = document.createElement("div");
+        text.className = "text";
+        text.textContent = msg.text;
+
+        const time = document.createElement("div");
+        time.className = "time";
+        time.textContent = msg.time;
+
+        message.appendChild(name);
+        message.appendChild(text);
+        message.appendChild(time);
+
+        messagesBox.appendChild(message);
+    });
+
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+}
+
+// Send a message.
+chatForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const text = messageInput.value.trim();
+
+    if (text === "") {
+        return;
+    }
+
+    const newMessage = {
+        username: username,
+        text: text,
+        time: new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit"
+        })
+    };
+
+    messages.push(newMessage);
+
+    // Keep the most recent 200 messages.
+    if (messages.length > 200) {
+        messages = messages.slice(-200);
+    }
+
+    saveMessages();
+    displayMessages();
+
+    messageInput.value = "";
+    messageInput.focus();
+});
+
+// Change username.
+function saveUsername() {
+    const newName = usernameInput.value.trim();
+
+    if (newName === "") {
+        alert("Please enter a username.");
+        return;
+    }
+
+    username = newName;
+
+    localStorage.setItem("loggedInUser", username);
+
+    alert("Username saved!");
+    displayMessages();
+}
+
+// Clear all messages.
+function clearChat() {
+    if (!confirm("Are you sure you want to clear the chat?")) {
+        return;
+    }
+
+    messages = [];
+    saveMessages();
+    displayMessages();
+}
+
+// Refresh messages if another tab changes local storage.
+window.addEventListener("storage", function(event) {
+    if (event.key === "zaynMikeMessages") {
+        messages = JSON.parse(event.newValue || "[]");
+        displayMessages();
+    }
+});
+
+// Show saved messages when the page opens.
+displayMessages();
+</script>
+
+</body>
+</html>
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+  <div>
+    <div class="eyebrow">THE DUO</div>
+
+    <h2>
+      Different styles.<br>
+      Same chaos.
+    </h2>
+
+    <p style="color:#aeb4ae;font-size:13px;line-height:1.8;max-width:430px">
+      Meet the creators behind the videos. Zayn brings the
+      lime energy, Mike brings the dark mode, and together
+      they turn every game into an adventure.
+    </p>
+
+    <div class="pillrow">
+      <span class="pill lime">ZAYN • LIME</span>
+      <span class="pill">MIKE • BLACK</span>
+    </div>
+  </div>
+
+  <div class="aboutbox">
+    <strong>
+      2 PLAYERS<br>
+      1 CHAOS
+    </strong>
+
+    <p>
+      Gaming, challenges, builds, and unexpected moments.
+      Pull up, pick a video, and join the fun.
+    </p>
+
+    <a class="button" href="#videos">SEE THE VIDEOS ↗</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact" style="text-align:center">
+  <div class="eyebrow">STAY IN THE LOOP</div>
+
+  <h2>
+    More adventures soon<span style="color:var(--lime)">.</span>
+  </h2>
+
+  <p style="color:#a5aaa5;font-size:13px">
+    Follow along and never miss the next upload.
+  </p>
+
+  <a class="button" href="#videos" style="margin-top:12px">
+    BACK TO VIDEOS ↑
+  </a>
+</section>
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zayn and Mike - Minigames</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 25px;
+    background: #222;
+    border-bottom: 4px solid #aaff00;
+}
+
+header h1 {
+    color: #aaff00;
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    color: #ccc;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #aaff00;
+}
+
+button {
+    background: #aaff00;
+    color: #111;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.04);
+    filter: brightness(0.9);
+}
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.game-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.game-card {
+    background: #252525;
+    border: 3px solid #aaff00;
+    border-radius: 15px;
+    padding: 25px;
+    width: 260px;
+}
+
+.game-card h2 {
+    font-size: 22px;
+}
+
+.game-card p {
+    color: #ddd;
+    min-height: 45px;
+}
+
+.game {
+    display: none;
+    max-width: 850px;
+    margin: auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.back-button {
+    background: #555;
+    color: white;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* CLICK GAME */
+
+#clickButton {
+    background: #aaff00;
+    color: black;
+    font-size: 25px;
+    padding: 35px;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.big-number {
+    font-size: 35px;
+    color: #aaff00;
+    font-weight: bold;
+}
+
+/* IMPOSTOR GAME */
+
+.player-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.player-card {
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 110px;
+}
+
+.secret-word {
+    font-size: 30px;
+    color: #aaff00;
+    font-weight: bold;
+    margin: 25px;
+}
+
+#impostorMessage {
+    font-size: 20px;
+    color: #aaff00;
+    min-height: 30px;
+}
+
+/* GUESS THE LOGO GAME */
+.logo-box {
+    width: 250px;
+    height: 180px;
+    max-width: 100%;
+    margin: 20px auto;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.logo-box img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+.logo-box img:hover {
+    transform: scale(1.15) rotate(3deg);
+}
+.logo-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+.logo-options button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+.logo-options button.correct {
+    background: #16c75b;
+    color: white;
+}
+.logo-options button.wrong {
+    background: #e53935;
+    color: white;
+}
+#logoFeedback {
+    min-height: 28px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* JUMP GAME */
+
+.jump-characters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.jump-characters button {
+    min-height: 65px;
+}
+
+#jumpCanvas {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #aaff00;
+    border-radius: 12px;
+    background: #75d5ff;
+}
+
+.jump-info {
+    display: flex;
+    justify-content: space-around;
+    color: #aaff00;
+    font-size: 20px;
+    margin: 10px;
+}
+
+footer {
+    color: #aaa;
+    padding: 20px;
+}
+
+@media(max-width: 500px) {
+    .jump-characters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game-card {
+        width: 90%;
+    }
+}
+
+
+/* PARKOUR GAME */
+#parkourCanvas {
+    display:block;
+    width:100%;
+    max-width:760px;
+    height:auto;
+    margin:15px auto;
+    border:3px solid #aaff00;
+    border-radius:12px;
+    background:#8bdcff;
+    touch-action:none;
+}
+.parkour-controls { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; }
+.parkour-controls button { min-width:90px; }
+#parkourStatus { min-height:28px; color:#aaff00; font-weight:bold; }
+
+
+/* Z&M STRIKE - BOT BATTLE */
+.zm-strike-card{background:linear-gradient(145deg,#202820,#111713);box-shadow:0 0 28px rgba(170,255,0,.18)}
+.zm-strike-card h2{text-shadow:0 0 12px #aaff00}
+.zm-strike-characters{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:760px;margin:20px auto}
+.zm-character{position:relative;overflow:hidden;min-height:165px;padding:12px;background:linear-gradient(160deg,#303a35,#111513);border:2px solid #3e4a43;border-radius:16px;color:white;transition:.2s;cursor:pointer}
+.zm-character:hover{transform:translateY(-5px);border-color:#aaff00;box-shadow:0 0 22px rgba(170,255,0,.24)}
+.zm-character.selected{border-color:#aaff00;box-shadow:0 0 28px rgba(170,255,0,.42);background:linear-gradient(160deg,#283c2d,#121812)}
+.zm-avatar{width:88px;height:104px;margin:0 auto 8px;position:relative;filter:drop-shadow(0 8px 7px rgba(0,0,0,.5))}
+.zm-head{position:absolute;width:46px;height:46px;left:21px;top:5px;border-radius:50%;background:#d59b70;border:3px solid #171717;z-index:3}
+.zm-hair{position:absolute;width:49px;height:23px;left:20px;top:3px;border-radius:25px 25px 8px 8px;background:#151515;z-index:4}
+.zm-body{position:absolute;width:66px;height:52px;left:11px;top:46px;border-radius:16px 16px 9px 9px;background:var(--char);border:3px solid #111;z-index:2}
+.zm-visor{position:absolute;width:34px;height:9px;left:27px;top:24px;border-radius:9px;background:#8eeaff;z-index:5;box-shadow:0 0 10px #8eeaff}
+.zm-strap{position:absolute;width:7px;height:47px;left:19px;top:47px;background:#111;z-index:4;transform:rotate(10deg)}
+.zm-name{font-weight:800;font-size:18px}.zm-role{color:#aeb8b1;font-size:12px;letter-spacing:.8px}
+.zm-selected{font-weight:800;color:#aaff00;min-height:24px}
+.zm-hud{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;color:#f4f7f5;font-weight:800;font-size:15px;margin:12px auto;max-width:900px}
+.zm-hud span{background:rgba(9,14,11,.82);border:1px solid #435047;border-radius:10px;padding:10px;text-align:center}.zm-hud b{color:#aaff00}
+.zm-arena{position:relative;width:100%;max-width:900px;height:500px;margin:18px auto;overflow:hidden;border:3px solid #8fc72a;border-radius:18px;background:#101713;box-shadow:inset 0 0 70px #000,0 0 28px rgba(170,255,0,.15);cursor:crosshair;touch-action:none}
+#zmCanvas{display:block;width:100%;height:100%;touch-action:none}
+.zm-crosshair{position:absolute;left:50%;top:50%;width:42px;height:42px;transform:translate(-50%,-50%);border:2px solid rgba(220,255,220,.75);border-radius:50%;pointer-events:none;z-index:8}.zm-crosshair:before,.zm-crosshair:after{content:"";position:absolute;background:#dfffe8;left:50%;top:50%;transform:translate(-50%,-50%)}.zm-crosshair:before{width:2px;height:58px}.zm-crosshair:after{height:2px;width:58px}
+.zm-hitmarker{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-weight:900;color:#fff;font-size:22px;opacity:0;pointer-events:none;z-index:9;text-shadow:0 2px 5px #000}.zm-hitmarker.show{animation:zmHit .25s ease-out}@keyframes zmHit{0%{opacity:1;transform:translate(-50%,-50%) scale(.8)}100%{opacity:0;transform:translate(-50%,-70%) scale(1.15)}}
+.zm-controls{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}.zm-controls button{min-width:110px}
+.zm-mobile-controls{display:none;justify-content:center;gap:10px;margin:8px auto}.zm-mobile-controls button{min-width:80px;min-height:48px}
+.zm-status{min-height:28px;font-weight:800;color:#aaff00}.zm-result{font-size:24px;color:#aaff00;font-weight:900}
+.zm-health{max-width:900px;margin:0 auto 8px;height:13px;border-radius:99px;overflow:hidden;background:#222;border:1px solid #4d5b51}.zm-health-fill{height:100%;width:100%;background:linear-gradient(90deg,#aaff00,#e7ff8a);transition:width .15s}
+.zm-strike-characters{perspective:900px}.zm-character{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 12px 25px rgba(0,0,0,.28)}.zm-character:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 35%,rgba(170,255,0,.04));pointer-events:none}.zm-avatar{transform:scale(1.08);transition:transform .25s}.zm-character:hover .zm-avatar{transform:scale(1.16) translateY(-3px)}.zm-body{box-shadow:inset 0 5px 0 rgba(255,255,255,.12),inset -8px 0 0 rgba(0,0,0,.12)}.zm-visor{background:linear-gradient(90deg,#5ee7ff,#dfffff,#5ee7ff)}.zm-arena{background:radial-gradient(circle at 50% 35%,rgba(100,130,105,.22),transparent 40%),#0b100d}.zm-hud span{backdrop-filter:blur(5px);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 6px 18px rgba(0,0,0,.2)}.zm-health-fill{background:linear-gradient(90deg,#7cff00,#dfff8b,#aaff00);box-shadow:0 0 12px rgba(170,255,0,.45)}
+@media(max-width:700px){.zm-strike-characters{grid-template-columns:repeat(2,1fr)}.zm-arena{height:380px}.zm-hud{grid-template-columns:repeat(3,1fr)}.zm-mobile-controls{display:flex}}
+@media(max-width:430px){.zm-strike-characters{gap:8px}.zm-character{min-height:145px}.zm-arena{height:320px}.zm-hud{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎮 ZAYN & MIKE MINIGAMES</h1>
+    <p>Welcome to the ultimate minigame zone!</p>
+</header>
+
+<section id="minigames">
+
+    <h2>CHOOSE A GAME</h2>
+
+    <div class="game-menu" id="gameMenu">
+
+        <div class="game-card">
+            <h2>🟢 ZAYN VS MIKE</h2>
+            <p>Who can click the fastest in 30 seconds?</p>
+            <button onclick="openClickGame()">PLAY NOW</button>
+        </div>
+
+        <div class="game-card">
+            <h2>🎭 IMPOSTOR</h2>
+            <p>Give clues and find the player with the different word!</p>
+            <button onclick="openImpostorGame()">PLAY NOW</button>
+        </div>
+
+        <div class="game-card">
+            <h2>🏃 JUMP ADVENTURE</h2>
+            <p>Choose a character and jump over obstacles!</p>
+            <button onclick="openJumpGame()">PLAY NOW</button>
+        </div>
+
+        <div class="game-card">
+            <h2>🖼️ GUESS THE LOGO</h2>
+            <p>Look at the logo and choose the correct brand!</p>
+            <button onclick="openLogoGame()">PLAY NOW</button>
+        </div>
+
+        <div class="game-card">
+            <h2>🧗 PARKOUR CHALLENGE</h2>
+            <p>Choose a character, leap across platforms, and reach the finish!</p>
+            <button onclick="openParkourGame()">PLAY NOW</button>
+        </div>
+
+
+        <div class="game-card zm-strike-card">
+            <h2>🎯 Z&M STRIKE</h2>
+            <p>Choose your character and hit targets before time runs out!</p>
+            <button onclick="openZMStrike()">PLAY NOW</button>
+        </div>
+
+    </div>
+
+    <!-- CLICK GAME -->
+    <div class="game" id="clickGame">
+        <h2>🟢 ZAYN VS MIKE</h2>
+        <p>Click the button as many times as you can in 30 seconds!</p>
+
+        <p>Time: <span class="big-number" id="clickTime">30</span></p>
+        <p>Score: <span class="big-number" id="clickScore">0</span></p>
+
+        <button id="clickButton" onclick="clickPoint()">CLICK ME!</button>
+
+        <p id="clickMessage">Press START to begin!</p>
+        <button onclick="startClickGame()">START</button>
+        <button onclick="resetClickGame()">RESET</button>
+        <br>
+        <button class="back-button" onclick="backToMenu()">BACK TO MINIGAMES</button>
+    </div>
+
+    <!-- IMPOSTOR GAME -->
+    <div class="game" id="impostorGame">
+        <h2>🎭 IMPOSTOR</h2>
+        <p>Six players. Five get the same word. One gets a different word!</p>
+
+        <div id="impostorSetup">
+            <p>Enter the six player names:</p>
+            <div id="playerInputs">
+                <input placeholder="Player 1" value="Zayn">
+                <input placeholder="Player 2" value="Mike">
+                <input placeholder="Player 3" value="Tyler">
+                <input placeholder="Player 4" value="Ruby">
+                <input placeholder="Player 5" value="Chloe">
+                <input placeholder="Player 6" value="Kylie">
+            </div>
+            <button onclick="startImpostor()">START GAME</button>
+        </div>
+
+        <div id="impostorPlay" class="hidden">
+            <h3 id="impostorTurn"></h3>
+            <p>Pass the device to this player. Make sure nobody else sees the word!</p>
+            <button id="revealButton" onclick="revealWord()">SHOW MY WORD</button>
+            <div id="secretWord" class="secret-word"></div>
+            <button id="nextPlayerButton" class="hidden" onclick="nextImpostorPlayer()">HIDE WORD & PASS</button>
+        </div>
+
+        <div id="impostorClues" class="hidden">
+            <h3>CLUE ROUND</h3>
+            <p>Each player gives one clue about their word. Don't say the word itself!</p>
+            <h3 id="clueTurn"></h3>
+            <button onclick="nextClue()">NEXT PLAYER</button>
+        </div>
+
+        <div id="impostorVoting" class="hidden">
+            <h3>VOTE FOR THE IMPOSTOR!</h3>
+            <p>Choose who you think has the different word.</p>
+            <div id="voteButtons" class="player-list"></div>
+        </div>
+
+        <div id="impostorResult" class="hidden">
+            <h2>RESULTS</h2>
+            <p id="impostorResultText"></p>
+            <button onclick="startImpostor()">PLAY AGAIN</button>
+        </div>
+
+        <button class="back-button" onclick="backToMenu()">BACK TO MINIGAMES</button>
+    </div>
+
+    <!-- JUMP ADVENTURE -->
+    <div class="game" id="jumpGame">
+        <h2>🏃 JUMP ADVENTURE</h2>
+        <p>Choose your character and jump over obstacles!</p>
+
+        <div id="jumpMenu">
+            <h3>CHOOSE YOUR CHARACTER</h3>
+
+            <div class="jump-characters">
+                <button onclick="chooseRunner('Zayn')">🟢 Zayn</button>
+                <button onclick="chooseRunner('Mike')">⚫ Mike</button>
+                <button onclick="chooseRunner('Tyler')">🔵 Tyler</button>
+                <button onclick="chooseRunner('Ruby')">🔴 Ruby</button>
+                <button onclick="chooseRunner('Chloe')">🟡 Chloe</button>
+                <button onclick="chooseRunner('Kylie')">🟣 Kylie</button>
+            </div>
+
+            <p id="chosenRunner">Choose a character!</p>
+            <button onclick="startJumpGame()">START GAME</button>
+        </div>
+
+        <div id="jumpArea" class="hidden">
+            <div class="jump-info">
+                <span>🏆 SCORE: <b id="jumpScore">0</b></span>
+                <span>⭐ BEST: <b id="jumpBest">0</b></span>
+            </div>
+
+            <canvas id="jumpCanvas" width="760" height="300"></canvas>
+
+            <p>Press SPACE, ↑, or tap JUMP!</p>
+            <button onclick="jump()">JUMP ⬆️</button>
+            <button onclick="restartJumpGame()">RESTART</button>
+            <button onclick="backToJumpMenu()">CHARACTER SELECT</button>
+        </div>
+
+        <div id="jumpOver" class="hidden">
+            <h2 style="color:#ff4444;">GAME OVER!</h2>
+            <p>Your score: <b id="finalJumpScore">0</b></p>
+            <button onclick="restartJumpGame()">TRY AGAIN</button>
+            <button onclick="backToJumpMenu()">CHOOSE CHARACTER</button>
+        </div>
+
+        <button class="back-button" onclick="backToMenu()">BACK TO MINIGAMES</button>
+    </div>
+
+    <!-- GUESS THE LOGO GAME -->
+    <div class="game" id="logoGame">
+        <h2>🖼️ GUESS THE LOGO</h2>
+        <p>Look at the logo and choose the correct brand!</p>
+
+        <div id="logoPlay">
+            <h3 id="logoQuestion">Question 1</h3>
+            <div class="logo-box">
+                <img id="logoImage" src="" alt="Mystery logo">
+            </div>
+            <div id="logoOptions" class="logo-options"></div>
+            <p id="logoFeedback"></p>
+            <div class="jump-info">
+                <span>⭐ SCORE: <b id="logoScore">0</b></span>
+                <span>📝 QUESTION: <b id="logoNumber">1</b>/5</span>
+            </div>
+            <button id="nextLogoButton" onclick="nextLogoQuestion()" class="hidden">NEXT LOGO</button>
+            <button onclick="restartLogoGame()">RESTART</button>
+        </div>
+
+        <div id="logoResult" class="hidden">
+            <h2>🎉 GAME COMPLETE!</h2>
+            <p id="logoFinalScore"></p>
+            <p id="logoResultMessage"></p>
+            <button onclick="restartLogoGame()">PLAY AGAIN</button>
+        </div>
+
+        <button class="back-button" onclick="backToMenu()">BACK TO MINIGAMES</button>
+    </div>
+
+
+    <!-- PARKOUR CHALLENGE -->
+    <div class="game" id="parkourGame">
+        <h2>🧗 PARKOUR CHALLENGE</h2>
+        <p>Choose a character, jump between platforms, and reach the green finish flag!</p>
+        <div id="parkourMenu">
+            <h3>CHOOSE YOUR CHARACTER</h3>
+            <div class="jump-characters">
+                <button onclick="chooseParkour('Zayn')">🟢 Zayn</button>
+                <button onclick="chooseParkour('Mike')">⚫ Mike</button>
+                <button onclick="chooseParkour('Ruby')">🔴 Ruby</button>
+                <button onclick="chooseParkour('Tyler')">🔵 Tyler</button>
+                <button onclick="chooseParkour('Chloe')">🟡 Chloe</button>
+                <button onclick="chooseParkour('Kylie')">🟣 Kylie</button>
+            </div>
+            <p id="parkourChosen">Choose a character!</p>
+            <button onclick="startParkour()">START PARKOUR</button>
+        </div>
+        <div id="parkourArea" class="hidden">
+            <div class="jump-info">
+                <span>🏁 CHECKPOINT: <b id="parkourProgress">0%</b></span>
+                <span>⭐ FALLS: <b id="parkourFalls">0</b></span>
+            </div>
+            <canvas id="parkourCanvas" width="760" height="360"></canvas>
+            <p>Use A/D or ←/→ to move. Press SPACE/↑ to jump, or use the buttons.</p>
+            <div class="parkour-controls">
+                <button onpointerdown="parkourLeft=true" onpointerup="parkourLeft=false" onpointerleave="parkourLeft=false" onpointercancel="parkourLeft=false">◀ LEFT</button>
+                <button onclick="parkourJump()">JUMP ⬆️</button>
+                <button onpointerdown="parkourRight=true" onpointerup="parkourRight=false" onpointerleave="parkourRight=false" onpointercancel="parkourRight=false">RIGHT ▶</button>
+            </div>
+            <p id="parkourStatus">Reach the flag!</p>
+            <button onclick="startParkour()">RESTART</button>
+            <button onclick="backToParkourMenu()">CHARACTER SELECT</button>
+        </div>
+        <button class="back-button" onclick="backToMenu()">BACK TO MINIGAMES</button>
+    </div>
+
+
+    <!-- Z&M STRIKE -->
+    <div class="game" id="zmStrikeGame">
+        <h2>🎯 Z&M STRIKE — BOT BATTLE</h2>
+        <p>Choose an operative, enter the arena, and take down the training bots. No graphic effects — just fast arcade action!</p>
+
+        <div id="zmStrikeMenu">
+            <h3>CHOOSE YOUR OPERATIVE</h3>
+            <div class="zm-strike-characters">
+                <button type="button" class="zm-character" onclick="selectZMCharacter('Zayn',this)"><div class="zm-avatar" style="--char:#aaff00"><div class="zm-hair"></div><div class="zm-head"></div><div class="zm-visor"></div><div class="zm-body"></div><div class="zm-strap"></div></div><div class="zm-name">Zayn</div><div class="zm-role">PRECISION • SNIPER</div></button>
+                <button type="button" class="zm-character" onclick="selectZMCharacter('Mike',this)"><div class="zm-avatar" style="--char:#555"><div class="zm-hair" style="background:#303030"></div><div class="zm-head"></div><div class="zm-visor"></div><div class="zm-body"></div><div class="zm-strap"></div></div><div class="zm-name">Mike</div><div class="zm-role">ARMOR • TANK</div></button>
+                <button type="button" class="zm-character" onclick="selectZMCharacter('Ruby',this)"><div class="zm-avatar" style="--char:#e83d57"><div class="zm-hair" style="background:#6b1022"></div><div class="zm-head"></div><div class="zm-visor"></div><div class="zm-body"></div><div class="zm-strap"></div></div><div class="zm-name">Ruby</div><div class="zm-role">AGILITY • SCOUT</div></button>
+                <button type="button" class="zm-character" onclick="selectZMCharacter('Tyler',this)"><div class="zm-avatar" style="--char:#36a9e1"><div class="zm-hair" style="background:#5a321e"></div><div class="zm-head"></div><div class="zm-visor"></div><div class="zm-body"></div><div class="zm-strap"></div></div><div class="zm-name">Tyler</div><div class="zm-role">SPEED • RUNNER</div></button>
+                <button type="button" class="zm-character" onclick="selectZMCharacter('Kylie',this)"><div class="zm-avatar" style="--char:#9b63e8"><div class="zm-hair" style="background:#35205a"></div><div class="zm-head"></div><div class="zm-visor"></div><div class="zm-body"></div><div class="zm-strap"></div></div><div class="zm-name">Kylie</div><div class="zm-role">DAMAGE • HUNTER</div></button>
+                <button type="button" class="zm-character" onclick="selectZMCharacter('Chloe',this)"><div class="zm-avatar" style="--char:#f0c936"><div class="zm-hair" style="background:#70431c"></div><div class="zm-head"></div><div class="zm-visor"></div><div class="zm-body"></div><div class="zm-strap"></div></div><div class="zm-name">Chloe</div><div class="zm-role">QUICK • MELEE</div></button>
+            </div>
+            <p id="zmSelected" class="zm-selected">Choose a character!</p>
+            <button onclick="startZMStrike()">START MATCH</button>
+        </div>
+
+        <div id="zmStrikePlay" class="hidden">
+            <div class="zm-hud">
+                <span>⭐ SCORE <b id="zmScore">0</b></span>
+                <span>🤖 BOTS <b id="zmBots">0</b></span>
+                <span>⏱️ TIME <b id="zmTime">60</b></span>
+                <span>❤️ HP <b id="zmHP">100</b></span>
+                <span>🔫 AMMO <b id="zmAmmo">12</b></span>
+            </div>
+            <div class="zm-health"><div id="zmHealthFill" class="zm-health-fill"></div></div>
+            <div class="zm-arena" id="zmArena">
+                <canvas id="zmCanvas" width="900" height="500" aria-label="Z&M Strike bot battle arena"></canvas>
+                <div class="zm-crosshair"></div>
+                <div id="zmHitmarker" class="zm-hitmarker">+100</div>
+            </div>
+            <p id="zmStatus" class="zm-status">WASD to move • mouse to aim • click to fire • R to reload</p>
+            <div class="zm-mobile-controls">
+                <button type="button" onpointerdown="zmKeys.left=true" onpointerup="zmKeys.left=false" onpointercancel="zmKeys.left=false">◀</button>
+                <button type="button" onclick="zmShoot()">🔥 FIRE</button>
+                <button type="button" onclick="zmReload()">↻ RELOAD</button>
+                <button type="button" onpointerdown="zmKeys.right=true" onpointerup="zmKeys.right=false" onpointercancel="zmKeys.right=false">▶</button>
+            </div>
+            <div class="zm-controls">
+                <button onclick="zmReload()">RELOAD [R]</button>
+                <button onclick="startZMStrike()">RESTART MATCH</button>
+                <button onclick="backToZMStrikeMenu()">CHARACTER SELECT</button>
+            </div>
+        </div>
+
+        <div id="zmStrikeResult" class="hidden">
+            <h2>🏆 MATCH COMPLETE</h2>
+            <p id="zmFinalScore" class="zm-result"></p>
+            <p id="zmResultMessage"></p>
+            <button onclick="startZMStrike()">PLAY AGAIN</button>
+            <button onclick="backToZMStrikeMenu()">CHOOSE CHARACTER</button>
+        </div>
+
+        <button class="back-button" onclick="backToMenu()">BACK TO MINIGAMES</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>© Zayn & Mike Minigames</p>
+</footer>
+
+<script>
+/* GENERAL MENU */
+
+function hideAllGames() {
+    document.getElementById("gameMenu").style.display = "none";
+    document.getElementById("clickGame").style.display = "none";
+    document.getElementById("impostorGame").style.display = "none";
+    document.getElementById("jumpGame").style.display = "none";
+    document.getElementById("logoGame").style.display = "none";
+    document.getElementById("parkourGame").style.display = "none";
+    document.getElementById("zmStrikeGame").style.display = "none";
+}
+
+function backToMenu() {
+    clearInterval(clickTimer);
+    jumpPlaying = false;
+    cancelAnimationFrame(jumpAnimationId);
+
+    document.getElementById("gameMenu").style.display = "flex";
+    document.getElementById("clickGame").style.display = "none";
+    document.getElementById("impostorGame").style.display = "none";
+    document.getElementById("jumpGame").style.display = "none";
+    document.getElementById("logoGame").style.display = "none";
+    document.getElementById("parkourGame").style.display = "none";
+    document.getElementById("zmStrikeGame").style.display = "none";
+    stopParkour();
+    stopZMStrike();
+}
+
+/* =========================
+   ZAYN VS MIKE CLICK GAME
+========================= */
+
+let clickScore = 0;
+let clickTime = 30;
+let clickTimer = null;
+let clickStarted = false;
+
+function openClickGame() {
+    hideAllGames();
+    document.getElementById("clickGame").style.display = "block";
+    resetClickGame();
+}
+
+function startClickGame() {
+    clearInterval(clickTimer);
+
+    clickScore = 0;
+    clickTime = 30;
+    clickStarted = true;
+
+    document.getElementById("clickScore").textContent = clickScore;
+    document.getElementById("clickTime").textContent = clickTime;
+    document.getElementById("clickMessage").textContent = "GO! GO! GO!";
+
+    clickTimer = setInterval(function() {
+        clickTime--;
+        document.getElementById("clickTime").textContent = clickTime;
+
+        if (clickTime <= 0) {
+            clearInterval(clickTimer);
+            clickStarted = false;
+            document.getElementById("clickMessage").textContent =
+                "TIME'S UP! Your final score is " + clickScore + "!";
+        }
+    }, 1000);
+}
+
+function clickPoint() {
+    if (!clickStarted) return;
+
+    clickScore++;
+    document.getElementById("clickScore").textContent = clickScore;
+}
+
+function resetClickGame() {
+    clearInterval(clickTimer);
+    clickScore = 0;
+    clickTime = 30;
+    clickStarted = false;
+
+    document.getElementById("clickScore").textContent = 0;
+    document.getElementById("clickTime").textContent = 30;
+    document.getElementById("clickMessage").textContent =
+        "Press START to begin!";
+}
+
+/* =========================
+   IMPOSTOR GAME
+========================= */
+
+let impostorPlayers = [];
+let impostorIndex = 0;
+let impostorNumber = 0;
+let clueIndex = 0;
+
+const wordPairs = [
+    ["Pizza", "Burger"],
+    ["Cat", "Dog"],
+    ["Football", "Basketball"],
+    ["School", "Hospital"],
+    ["Apple", "Orange"],
+    ["Beach", "Swimming pool"],
+    ["Car", "Bus"],
+    ["Ice cream", "Cake"],
+    ["Lion", "Tiger"],
+    ["Phone", "Computer"]
+];
+
+let commonWord = "";
+let differentWord = "";
+
+function openImpostorGame() {
+    hideAllGames();
+    document.getElementById("impostorGame").style.display = "block";
+    resetImpostorScreens();
+}
+
+function resetImpostorScreens() {
+    document.getElementById("impostorSetup").classList.remove("hidden");
+    document.getElementById("impostorPlay").classList.add("hidden");
+    document.getElementById("impostorClues").classList.add("hidden");
+    document.getElementById("impostorVoting").classList.add("hidden");
+    document.getElementById("impostorResult").classList.add("hidden");
+}
+
+function startImpostor() {
+    const inputs = document.querySelectorAll("#playerInputs input");
+    impostorPlayers = Array.from(inputs).map((input, index) =>
+        input.value.trim() || "Player " + (index + 1)
+    );
+
+    impostorNumber = Math.floor(Math.random() * impostorPlayers.length);
+    impostorIndex = 0;
+    clueIndex = 0;
+
+    const pair = wordPairs[Math.floor(Math.random() * wordPairs.length)];
+    commonWord = pair[0];
+    differentWord = pair[1];
+
+    document.getElementById("impostorSetup").classList.add("hidden");
+    document.getElementById("impostorPlay").classList.remove("hidden");
+    document.getElementById("impostorClues").classList.add("hidden");
+    document.getElementById("impostorVoting").classList.add("hidden");
+    document.getElementById("impostorResult").classList.add("hidden");
+
+    showImpostorPlayer();
+}
+
+function showImpostorPlayer() {
+    document.getElementById("impostorTurn").textContent =
+        "Player " + (impostorIndex + 1) + ": " + impostorPlayers[impostorIndex];
+
+    document.getElementById("secretWord").textContent = "";
+    document.getElementById("revealButton").classList.remove("hidden");
+    document.getElementById("nextPlayerButton").classList.add("hidden");
+}
+
+function revealWord() {
+    const word = impostorIndex === impostorNumber
+        ? differentWord
+        : commonWord;
+
+    document.getElementById("secretWord").textContent = word;
+    document.getElementById("revealButton").classList.add("hidden");
+    document.getElementById("nextPlayerButton").classList.remove("hidden");
+}
+
+function nextImpostorPlayer() {
+    impostorIndex++;
+
+    if (impostorIndex < impostorPlayers.length) {
+        showImpostorPlayer();
+    } else {
+        document.getElementById("impostorPlay").classList.add("hidden");
+        document.getElementById("impostorClues").classList.remove("hidden");
+        showCluePlayer();
+    }
+}
+
+function showCluePlayer() {
+    if (clueIndex >= impostorPlayers.length) {
+        document.getElementById("impostorClues").classList.add("hidden");
+        showVoting();
+        return;
+    }
+
+    document.getElementById("clueTurn").textContent =
+        "It's " + impostorPlayers[clueIndex] + "'s turn to give a clue!";
+}
+
+function nextClue() {
+    clueIndex++;
+    showCluePlayer();
+}
+
+function showVoting() {
+    document.getElementById("impostorVoting").classList.remove("hidden");
+
+    const buttons = document.getElementById("voteButtons");
+    buttons.innerHTML = "";
+
+    impostorPlayers.forEach(function(player, index) {
+        const button = document.createElement("button");
+        button.textContent = player;
+        button.onclick = function() {
+            voteForImpostor(index);
+        };
+        buttons.appendChild(button);
+    });
+}
+
+function voteForImpostor(votedIndex) {
+    const result = document.getElementById("impostorResultText");
+    const correct = votedIndex === impostorNumber;
+
+    document.getElementById("impostorVoting").classList.add("hidden");
+    document.getElementById("impostorResult").classList.remove("hidden");
+
+    result.textContent = correct
+        ? "Correct! " + impostorPlayers[impostorNumber] + " was the impostor!"
+        : "Not quite! The impostor was " + impostorPlayers[impostorNumber] + ".";
+
+    result.textContent += " The different word was " + differentWord +
+        ". The common word was " + commonWord + ".";
+}
+
+/* =========================
+   GUESS THE LOGO GAME
+========================= */
+
+const logoQuestions = [
+    { image: "C:/Users/ALOKO/Desktop/Vscode book/logo/nike.png", answer: "Nike", options: ["Nike", "Adidas", "Puma", "Reebok"] },
+    { image: "C:/Users/ALOKO/Desktop/Vscode book/logo/apple.png", answer: "Apple", options: ["Samsung", "Apple", "Google", "Microsoft"] },
+    { image: "C:/Users/ALOKO/Desktop/Vscode book/logo/mcdonalds.png", answer: "McDonald's", options: ["KFC", "Subway", "McDonald's", "Burger King"] },
+    { image: "C:/Users/ALOKO/Desktop/Vscode book/logo/youtube.png", answer: "YouTube", options: ["TikTok", "Instagram", "YouTube", "Facebook"] },
+    { image: "C:/Users/ALOKO/Desktop/Vscode book/logo/adidas.png", answer: "Adidas", options: ["Nike", "Puma", "Reebok", "Adidas"] }
+  ];
+
+let currentLogoQuestion = 0;
+let logoScore = 0;
+let logoAnswered = false;
+
+function openLogoGame() {
+    hideAllGames();
+    document.getElementById("logoGame").style.display = "block";
+    restartLogoGame();
+}
+
+function loadLogoQuestion() {
+    const question = logoQuestions[currentLogoQuestion];
+    const options = document.getElementById("logoOptions");
+
+    document.getElementById("logoQuestion").textContent = "Guess the Logo!";
+    document.getElementById("logoImage").src = question.image;
+    document.getElementById("logoImage").alt = "Mystery logo";
+    document.getElementById("logoNumber").textContent = currentLogoQuestion + 1;
+    document.getElementById("logoScore").textContent = logoScore;
+    document.getElementById("logoFeedback").textContent = "";
+    document.getElementById("nextLogoButton").classList.add("hidden");
+
+    options.innerHTML = "";
+    logoAnswered = false;
+
+    question.options.forEach(function(option) {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.addEventListener("click", function() {
+            checkLogoAnswer(option, button);
+        });
+        options.appendChild(button);
+    });
+}
+
+function checkLogoAnswer(selected, selectedButton) {
+    if (logoAnswered) return;
+    logoAnswered = true;
+
+    const question = logoQuestions[currentLogoQuestion];
+    const feedback = document.getElementById("logoFeedback");
+
+    document.querySelectorAll("#logoOptions button").forEach(function(button) {
+        button.disabled = true;
+        if (button.textContent === question.answer) {
+            button.classList.add("correct");
+        }
+    });
+
+    if (selected === question.answer) {
+        logoScore++;
+        feedback.textContent = "Correct! Well done!";
+        feedback.style.color = "#aaff00";
+    } else {
+        selectedButton.classList.add("wrong");
+        feedback.textContent = "Not quite! The answer is " + question.answer + ".";
+        feedback.style.color = "#ff5555";
+    }
+
+    document.getElementById("logoScore").textContent = logoScore;
+    document.getElementById("nextLogoButton").textContent =
+        currentLogoQuestion === logoQuestions.length - 1 ? "SEE RESULTS" : "NEXT LOGO";
+    document.getElementById("nextLogoButton").classList.remove("hidden");
+}
+
+function nextLogoQuestion() {
+    if (!logoAnswered) return;
+
+    if (currentLogoQuestion === logoQuestions.length - 1) {
+        document.getElementById("logoPlay").classList.add("hidden");
+        document.getElementById("logoResult").classList.remove("hidden");
+        document.getElementById("logoFinalScore").textContent =
+            "Your score: " + logoScore + " / " + logoQuestions.length;
+        document.getElementById("logoResultMessage").textContent =
+            logoScore === 5 ? "Perfect score! You got every logo right!" :
+            logoScore >= 3 ? "Great job! You know your logos!" :
+            "Good try! Play again and see if you can improve!";
+        return;
+    }
+
+    currentLogoQuestion++;
+    loadLogoQuestion();
+}
+
+function restartLogoGame() {
+    currentLogoQuestion = 0;
+    logoScore = 0;
+    logoAnswered = false;
+    document.getElementById("logoPlay").classList.remove("hidden");
+    document.getElementById("logoResult").classList.add("hidden");
+    loadLogoQuestion();
+}
+
+/* =========================
+   JUMP ADVENTURE
+========================= */
+
+const jumpCanvas = document.getElementById("jumpCanvas");
+const jumpCtx = jumpCanvas.getContext("2d");
+
+const runnerColors = {
+    Zayn: "#aaff00",
+    Mike: "#222222",
+    Tyler: "#70dfff",
+    Ruby: "#ff3333",
+    Chloe: "#ffdf00",
+    Kylie: "#b76cff"
+};
+
+let runnerName = "";
+let runnerColor = "#aaff00";
+let runner = {};
+let obstacles = [];
+let jumpScore = 0;
+let jumpBest = Number(localStorage.getItem("jumpBest") || 0);
+let jumpSpeed = 5;
+let jumpPlaying = false;
+let jumpFrame = 0;
+let jumpAnimationId = null;
+const groundY = 250;
+
+document.getElementById("jumpBest").textContent = jumpBest;
+
+function openJumpGame() {
+    hideAllGames();
+    document.getElementById("jumpGame").style.display = "block";
+    document.getElementById("jumpMenu").classList.remove("hidden");
+    document.getElementById("jumpArea").classList.add("hidden");
+    document.getElementById("jumpOver").classList.add("hidden");
+}
+
+function chooseRunner(name) {
+    runnerName = name;
+    runnerColor = runnerColors[name];
+    document.getElementById("chosenRunner").textContent =
+        "Selected character: " + name;
+}
+
+function startJumpGame() {
+    if (!runnerName) {
+        alert("Please choose a character first!");
+        return;
+    }
+
+    document.getElementById("jumpMenu").classList.add("hidden");
+    document.getElementById("jumpOver").classList.add("hidden");
+    document.getElementById("jumpArea").classList.remove("hidden");
+
+    jumpScore = 0;
+    jumpSpeed = 5;
+    jumpFrame = 0;
+    obstacles = [];
+
+    runner = {
+        x: 100,
+        y: groundY - 42,
+        width: 34,
+        height: 42,
+        velocityY: 0,
+        jumping: false
+    };
+
+    jumpPlaying = true;
+    document.getElementById("jumpScore").textContent = 0;
+
+    cancelAnimationFrame(jumpAnimationId);
+    gameLoop();
+}
+
+function jump() {
+    if (!jumpPlaying || runner.jumping) return;
+
+    runner.velocityY = -13;
+    runner.jumping = true;
+}
+
+function gameLoop() {
+    if (!jumpPlaying) return;
+
+    jumpFrame++;
+    updateJumpGame();
+    drawJumpGame();
+
+    if (jumpPlaying) {
+        jumpAnimationId = requestAnimationFrame(gameLoop);
+    }
+}
+
+function updateJumpGame() {
+    runner.velocityY += 0.6;
+    runner.y += runner.velocityY;
+
+    if (runner.y >= groundY - runner.height) {
+        runner.y = groundY - runner.height;
+        runner.velocityY = 0;
+        runner.jumping = false;
+    }
+
+    if (jumpFrame % 85 === 0) {
+        const height = 25 + Math.random() * 20;
+
+        obstacles.push({
+            x: jumpCanvas.width,
+            y: groundY - height,
+            width: 25 + Math.random() * 15,
+            height: height
+        });
+    }
+
+    obstacles.forEach(obstacle => {
+        obstacle.x -= jumpSpeed;
+    });
+
+    obstacles = obstacles.filter(o => o.x + o.width > 0);
+
+    if (jumpFrame % 6 === 0) {
+        jumpScore++;
+        document.getElementById("jumpScore").textContent = jumpScore;
+    }
+
+    if (jumpFrame % 500 === 0) {
+        jumpSpeed += 0.5;
+    }
+
+    for (const obstacle of obstacles) {
+        if (
+            runner.x + runner.width - 5 > obstacle.x &&
+            runner.x + 5 < obstacle.x + obstacle.width &&
+            runner.y + runner.height - 3 > obstacle.y
+        ) {
+            endJumpGame();
+            return;
+        }
+    }
+}
+
+function drawJumpGame() {
+    const ctx = jumpCtx;
+    ctx.clearRect(0, 0, jumpCanvas.width, jumpCanvas.height);
+
+    ctx.fillStyle = "#75d5ff";
+    ctx.fillRect(0, 0, 760, 300);
+
+    ctx.fillStyle = "white";
+    drawCloud(100 - (jumpFrame % 900), 55);
+    drawCloud(400 - (jumpFrame % 1000), 95);
+    drawCloud(650 - (jumpFrame % 1100), 35);
+
+    ctx.fillStyle = "#7ed68a";
+    ctx.beginPath();
+    ctx.moveTo(0, groundY);
+
+    for (let x = 0; x <= 760; x += 20) {
+        ctx.lineTo(
+            x,
+            225 + Math.sin((x + jumpFrame * 0.3) / 70) * 15
+        );
+    }
+
+    ctx.lineTo(760, 300);
+    ctx.lineTo(0, 300);
+    ctx.fill();
+
+    ctx.fillStyle = "#35b82e";
+    ctx.fillRect(0, groundY, 760, 12);
+
+    ctx.fillStyle = "#9b552e";
+    ctx.fillRect(0, groundY + 12, 760, 38);
+
+    ctx.fillStyle = "#633b25";
+    ctx.fillRect(0, groundY + 45, 760, 5);
+
+    ctx.fillStyle = "#6e442c";
+
+    for (let i = 0; i < 20; i++) {
+        let x = (i * 50 - jumpFrame * jumpSpeed) % 800;
+        if (x < 0) x += 800;
+        ctx.fillRect(x, groundY + 23, 12, 5);
+    }
+
+    obstacles.forEach(obstacle => {
+        ctx.fillStyle = "#a35a24";
+        ctx.fillRect(
+            obstacle.x,
+            obstacle.y,
+            obstacle.width,
+            obstacle.height
+        );
+
+        ctx.fillStyle = "#e5a34d";
+        ctx.fillRect(
+            obstacle.x + 4,
+            obstacle.y + 4,
+            obstacle.width - 8,
+            5
+        );
+
+        ctx.strokeStyle = "#633b25";
+        ctx.lineWidth = 3;
+        ctx.strokeRect(
+            obstacle.x,
+            obstacle.y,
+            obstacle.width,
+            obstacle.height
+        );
+    });
+
+    drawRunner(runner.x, runner.y, runnerColor, jumpFrame);
+}
+
+function drawCloud(x, y) {
+    const ctx = jumpCtx;
+    ctx.beginPath();
+    ctx.arc(x, y, 16, 0, Math.PI * 2);
+    ctx.arc(x + 20, y - 10, 22, 0, Math.PI * 2);
+    ctx.arc(x + 45, y, 16, 0, Math.PI * 2);
+    ctx.fill();
+}
+
+function drawRunner(x, y, color, frame) {
+    const ctx = jumpCtx;
+    const legMove = runner.jumping ? 0 : Math.sin(frame * 0.4) * 6;
+
+    ctx.fillStyle = "rgba(0,0,0,0.2)";
+    ctx.beginPath();
+    ctx.ellipse(x + 17, groundY + 2, 22, 5, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = color;
+    ctx.fillRect(x + 5, y + 30, 10, 12 + legMove);
+    ctx.fillRect(x + 20, y + 30, 10, 12 - legMove);
+
+    ctx.fillStyle = color;
+    ctx.strokeStyle = "#151515";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.roundRect(x, y + 5, 34, 33, 12);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = color;
+    ctx.fillRect(x - 5, y + 14, 8, 18);
+
+    ctx.fillStyle = "#aeeaff";
+    ctx.strokeStyle = "#151515";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.roundRect(x + 13, y + 10, 23, 13, 6);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = "white";
+    ctx.fillRect(x + 17, y + 12, 9, 3);
+}
+
+function endJumpGame() {
+    jumpPlaying = false;
+    cancelAnimationFrame(jumpAnimationId);
+
+    if (jumpScore > jumpBest) {
+        jumpBest = jumpScore;
+        localStorage.setItem("jumpBest", jumpBest);
+    }
+
+    document.getElementById("jumpBest").textContent = jumpBest;
+    document.getElementById("finalJumpScore").textContent = jumpScore;
+
+    document.getElementById("jumpArea").classList.add("hidden");
+    document.getElementById("jumpOver").classList.remove("hidden");
+}
+
+function restartJumpGame() {
+    startJumpGame();
+}
+
+function backToJumpMenu() {
+    jumpPlaying = false;
+    cancelAnimationFrame(jumpAnimationId);
+
+    document.getElementById("jumpArea").classList.add("hidden");
+    document.getElementById("jumpOver").classList.add("hidden");
+    document.getElementById("jumpMenu").classList.remove("hidden");
+}
+
+document.addEventListener("keydown", function(event) {
+    if (
+        document.getElementById("jumpGame").style.display !== "none" &&
+        !document.getElementById("jumpArea").classList.contains("hidden") &&
+        (event.code === "Space" || event.code === "ArrowUp")
+    ) {
+        event.preventDefault();
+        jump();
+    }
+});
+
+jumpCanvas.addEventListener("pointerdown", function(event) {
+    event.preventDefault();
+    jump();
+});
+
+/* =========================
+   PARKOUR CHALLENGE
+========================= */
+const parkourCanvas = document.getElementById("parkourCanvas");
+const pctx = parkourCanvas.getContext("2d");
+const parkourColors = {Zayn:"#aaff00", Mike:"#292929", Ruby:"#ff3333", Tyler:"#70dfff", Chloe:"#ffdf00", Kylie:"#b76cff"};
+let parkourName = "";
+let parkourPlayer = null;
+let parkourFrame = 0;
+let parkourRunning = false;
+let parkourRAF = null;
+let parkourLeft = false, parkourRight = false, parkourFalls = 0;
+const pPlatforms = [
+    {x:0,y:320,w:150,h:40}, {x:190,y:280,w:105,h:18},
+    {x:340,y:235,w:100,h:18}, {x:485,y:285,w:95,h:18},
+    {x:625,y:235,w:135,h:18}, {x:790,y:190,w:105,h:18},
+    {x:940,y:245,w:110,h:18}, {x:1095,y:195,w:120,h:18},
+    {x:1260,y:150,w:130,h:18}, {x:1440,y:205,w:120,h:18},
+    {x:1605,y:160,w:155,h:18}
+];
+const pWorldWidth = 1810;
+function openParkourGame() {
+    hideAllGames();
+    document.getElementById("parkourGame").style.display = "block";
+    document.getElementById("parkourMenu").classList.remove("hidden");
+    document.getElementById("parkourArea").classList.add("hidden");
+    stopParkour();
+}
+function chooseParkour(name) {
+    parkourName = name;
+    document.getElementById("parkourChosen").textContent = "Selected character: " + name;
+}
+function startParkour() {
+    if (!parkourName) { alert("Please choose a character first!"); return; }
+    stopParkour();
+    parkourFalls = 0; parkourFrame = 0;
+    parkourPlayer = {x:25,y:270,w:28,h:42,vx:0,vy:0,onGround:false};
+    parkourLeft = false; parkourRight = false;
+    document.getElementById("parkourFalls").textContent = "0";
+    document.getElementById("parkourStatus").textContent = "Reach the green finish flag!";
+    document.getElementById("parkourMenu").classList.add("hidden");
+    document.getElementById("parkourArea").classList.remove("hidden");
+    parkourRunning = true;
+    parkourLoop();
+}
+function stopParkour() {
+    parkourRunning = false;
+    if (parkourRAF !== null) cancelAnimationFrame(parkourRAF);
+    parkourRAF = null;
+}
+function parkourJump() {
+    if (parkourRunning && parkourPlayer && parkourPlayer.onGround) {
+        parkourPlayer.vy = -11.5;
+        parkourPlayer.onGround = false;
+    }
+}
+function backToParkourMenu() {
+    stopParkour();
+    parkourLeft = false; parkourRight = false;
+    document.getElementById("parkourArea").classList.add("hidden");
+    document.getElementById("parkourMenu").classList.remove("hidden");
+}
+function parkourLoop() {
+    if (!parkourRunning) return;
+    parkourFrame++;
+    const p = parkourPlayer;
+    const oldBottom = p.y + p.h;
+    p.vx = (parkourRight ? 3.7 : 0) - (parkourLeft ? 3.7 : 0);
+    p.x = Math.max(0, Math.min(pWorldWidth-p.w, p.x+p.vx));
+    p.vy = Math.min(12, p.vy+0.48);
+    p.y += p.vy;
+    p.onGround = false;
+    for (const plat of pPlatforms) {
+        if (p.vy >= 0 && oldBottom <= plat.y+4 && p.y+p.h >= plat.y &&
+            p.x+p.w > plat.x && p.x < plat.x+plat.w) {
+            p.y = plat.y-p.h; p.vy = 0; p.onGround = true;
+        }
+    }
+    if (p.y > 410) {
+        parkourFalls++;
+        document.getElementById("parkourFalls").textContent = parkourFalls;
+        p.x = Math.max(25, Math.floor(p.x/150)*150-20);
+        p.y = 220; p.vy = 0;
+    }
+    if (p.x > 1720 && p.y+p.h <= 230) {
+        parkourRunning = false;
+        document.getElementById("parkourStatus").textContent = "🎉 YOU REACHED THE FINISH! Great parkour, " + parkourName + "!";
+    }
+    document.getElementById("parkourProgress").textContent = Math.min(100,Math.floor(p.x/1720*100))+"%";
+    drawParkour();
+    if (parkourRunning) parkourRAF = requestAnimationFrame(parkourLoop);
+}
+function drawParkour() {
+    const ctx = pctx, p = parkourPlayer;
+    const camera = Math.max(0, Math.min(pWorldWidth-parkourCanvas.width, p.x-220));
+    ctx.clearRect(0,0,760,360);
+    ctx.fillStyle="#8bdcff"; ctx.fillRect(0,0,760,360);
+    ctx.fillStyle="#fff";
+    for(let i=0;i<5;i++){ const x=((i*210-camera*.25)%900+900)%900; ctx.beginPath();ctx.arc(x,55+(i%2)*35,17,0,Math.PI*2);ctx.arc(x+20,48+(i%2)*35,22,0,Math.PI*2);ctx.arc(x+43,57+(i%2)*35,16,0,Math.PI*2);ctx.fill(); }
+    ctx.fillStyle="#55b96b"; ctx.fillRect(0,330,760,30);
+    for(const plat of pPlatforms){
+        const x=plat.x-camera;
+        if(x+plat.w<0||x>760) continue;
+        ctx.fillStyle="#8a572e";ctx.fillRect(x,plat.y,plat.w,plat.h);
+        ctx.fillStyle="#aaff00";ctx.fillRect(x,plat.y,plat.w,5);
+    }
+    const flagX=1740-camera;
+    ctx.fillStyle="#333";ctx.fillRect(flagX,145,5,85);
+    ctx.fillStyle="#aaff00";ctx.beginPath();ctx.moveTo(flagX+5,145);ctx.lineTo(flagX+45,158);ctx.lineTo(flagX+5,172);ctx.fill();
+    ctx.fillStyle=parkourColors[parkourName]||"#aaff00";
+    ctx.fillRect(p.x-camera,p.y+12,p.w,p.h-12);
+    ctx.beginPath();ctx.arc(p.x-camera+p.w/2,p.y+9,10,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle="#fff";ctx.fillRect(p.x-camera+5,p.y+6,4,3);ctx.fillRect(p.x-camera+17,p.y+6,4,3);
+}
+document.addEventListener("keydown", function(e) {
+    if(document.getElementById("parkourGame").style.display==="none" || !parkourRunning) return;
+    if(["ArrowLeft","ArrowRight","ArrowUp","Space"].includes(e.code)) e.preventDefault();
+    if(e.code==="ArrowLeft"||e.code==="KeyA") parkourLeft=true;
+    if(e.code==="ArrowRight"||e.code==="KeyD") parkourRight=true;
+    if(e.code==="ArrowUp"||e.code==="Space"||e.code==="KeyW") parkourJump();
+});
+document.addEventListener("keyup", function(e) {
+    if(e.code==="ArrowLeft"||e.code==="KeyA") parkourLeft=false;
+    if(e.code==="ArrowRight"||e.code==="KeyD") parkourRight=false;
+});
+window.addEventListener("blur",()=>{parkourLeft=false;parkourRight=false;});
+
+
+
+
+/* =========================
+   Z&M STRIKE — BOT BATTLE
+========================= */
+let zmCharacter = "";
+let zmScore = 0, zmBots = 0, zmTime = 60, zmHP = 100, zmAmmo = 12;
+let zmTimer = null, zmFrame = null, zmRunning = false, zmReloading = false, zmLast = 0, zmLastShot = 0;
+const zmKeys = {left:false,right:false,up:false,down:false};
+const zmPlayer = {x:450,y:250,r:18,speed:190,angle:0};
+let zmBotsList = [];
+let zmShots = [];
+let zmMouse = {x:450,y:250,down:false};
+
+function openZMStrike(){
+    hideAllGames();
+    document.getElementById("zmStrikeGame").style.display="block";
+    document.getElementById("zmStrikeMenu").classList.remove("hidden");
+    document.getElementById("zmStrikePlay").classList.add("hidden");
+    document.getElementById("zmStrikeResult").classList.add("hidden");
+}
+function selectZMCharacter(name,button){
+    zmCharacter=name;
+    document.querySelectorAll(".zm-character").forEach(c=>c.classList.remove("selected"));
+    button.classList.add("selected");
+    document.getElementById("zmSelected").textContent="Selected operative: "+name;
+}
+function zmCanvas(){return document.getElementById("zmCanvas");}
+function zmResetKeys(){zmKeys.left=zmKeys.right=zmKeys.up=zmKeys.down=false;zmMouse.down=false;}
+function zmSpawnBot(){
+    const canvas=zmCanvas();
+    const side=Math.floor(Math.random()*4);
+    let x,y;
+    if(side===0){x=30;y=40+Math.random()*(canvas.height-80)}
+    else if(side===1){x=canvas.width-30;y=40+Math.random()*(canvas.height-80)}
+    else if(side===2){x=40+Math.random()*(canvas.width-80);y=30}
+    else{x=40+Math.random()*(canvas.width-80);y=canvas.height-30}
+    zmBotsList.push({x,y,r:17,hp:100,maxHp:100,speed:42+Math.random()*24,shoot:1+Math.random()*1.6,phase:Math.random()*6.28,alive:true});
+}
+function zmStartBots(){zmBotsList=[];for(let i=0;i<5;i++)zmSpawnBot();}
+function startZMStrike(){
+    if(!zmCharacter){alert("Please choose a character first!");return;}
+    stopZMStrike();
+    zmScore=0;zmBots=0;zmTime=60;zmHP=100;zmAmmo=12;zmReloading=false;zmRunning=true;
+    zmPlayer.x=450;zmPlayer.y=250;zmPlayer.angle=0;zmShots=[];zmStartBots();zmResetKeys();
+    document.getElementById("zmStrikeMenu").classList.add("hidden");
+    document.getElementById("zmStrikeResult").classList.add("hidden");
+    document.getElementById("zmStrikePlay").classList.remove("hidden");
+    zmUpdateHUD();
+    document.getElementById("zmStatus").textContent=zmCharacter+" deployed. Eliminate the bots!";
+    zmLast=performance.now();zmFrame=requestAnimationFrame(zmLoop);
+    zmTimer=setInterval(()=>{if(!zmRunning)return;zmTime--;zmUpdateHUD();if(zmTime<=0)endZMStrike("TIME UP");},1000);
+}
+function zmUpdateHUD(){
+    document.getElementById("zmScore").textContent=zmScore;
+    document.getElementById("zmBots").textContent=zmBots;
+    document.getElementById("zmTime").textContent=zmTime;
+    document.getElementById("zmHP").textContent=Math.max(0,Math.round(zmHP));
+    document.getElementById("zmAmmo").textContent=zmReloading?"...":zmAmmo;
+    document.getElementById("zmHealthFill").style.width=Math.max(0,zmHP)+"%";
+}
+function zmShoot(){
+    if(!zmRunning||zmReloading||zmAmmo<=0)return;
+    const now=performance.now();
+    if(now-zmLastShot<135)return;
+    zmLastShot=now;
+    zmAmmo--;
+    const canvas=zmCanvas();
+    const rect=canvas.getBoundingClientRect();
+    const tx=(zmMouse.x/rect.width)*canvas.width,ty=(zmMouse.y/rect.height)*canvas.height;
+    const ang=Math.atan2(ty-zmPlayer.y,tx-zmPlayer.x);zmPlayer.angle=ang;
+    zmShots.push({x:zmPlayer.x+Math.cos(ang)*23,y:zmPlayer.y+Math.sin(ang)*23,vx:Math.cos(ang)*720,vy:Math.sin(ang)*720,life:0.7});
+    if(zmAmmo===0)document.getElementById("zmStatus").textContent="MAG EMPTY — PRESS R TO RELOAD";
+    zmUpdateHUD();
+}
+function zmReload(){
+    if(!zmRunning||zmReloading||zmAmmo===12)return;
+    zmReloading=true;document.getElementById("zmStatus").textContent="RELOADING...";zmUpdateHUD();
+    setTimeout(()=>{if(!zmRunning)return;zmAmmo=12;zmReloading=false;document.getElementById("zmStatus").textContent="MAG READY — KEEP MOVING";zmUpdateHUD();},850);
+}
+function zmDamagePlayer(amount){
+    zmHP=Math.max(0,zmHP-amount);zmUpdateHUD();
+    if(zmHP<=0)endZMStrike("MISSION FAILED");
+}
+function zmLoop(now){
+    if(!zmRunning)return;
+    const dt=Math.min(.033,(now-zmLast)/1000||0);zmLast=now;
+    const canvas=zmCanvas();
+    let dx=(zmKeys.right?1:0)-(zmKeys.left?1:0),dy=(zmKeys.down?1:0)-(zmKeys.up?1:0);
+    const len=Math.hypot(dx,dy)||1;dx/=len;dy/=len;
+    zmPlayer.x=Math.max(24,Math.min(canvas.width-24,zmPlayer.x+dx*zmPlayer.speed*dt));
+    zmPlayer.y=Math.max(24,Math.min(canvas.height-24,zmPlayer.y+dy*zmPlayer.speed*dt));
+    if(zmMouse.down)zmShoot();
+    for(const s of zmShots){s.x+=s.vx*dt;s.y+=s.vy*dt;s.life-=dt;}
+    zmShots=zmShots.filter(s=>s.life>0&&s.x>-20&&s.x<canvas.width+20&&s.y>-20&&s.y<canvas.height+20);
+    for(const b of zmBotsList){
+        if(!b.alive)continue;
+        const ax=zmPlayer.x-b.x,ay=zmPlayer.y-b.y,d=Math.hypot(ax,ay)||1;
+        b.phase+=dt;
+        const strafe=Math.sin(b.phase)*.45;
+        if(d>115){b.x+=(ax/d+(-ay/d)*strafe)*b.speed*dt;b.y+=(ay/d+(ax/d)*strafe)*b.speed*dt;}
+        b.x=Math.max(25,Math.min(canvas.width-25,b.x));b.y=Math.max(25,Math.min(canvas.height-25,b.y));
+        b.shoot-=dt;
+        if(b.shoot<=0&&d<420){b.shoot=1.1+Math.random()*1.2;zmDamagePlayer(4+Math.random()*4);}
+    }
+    for(const s of zmShots){
+        for(const b of zmBotsList){
+            if(!b.alive)continue;
+            if(Math.hypot(s.x-b.x,s.y-b.y)<b.r+5){b.hp-=50;s.life=0;zmHitMarker();if(b.hp<=0){b.alive=false;zmBots++;zmScore+=100;document.getElementById("zmStatus").textContent="BOT DOWN! +100";if(zmBotsList.filter(x=>x.alive).length<4)zmSpawnBot();zmUpdateHUD();}else{zmScore+=25;zmUpdateHUD();}break;}
+        }
+    }
+    zmDraw(canvas);
+    zmFrame=requestAnimationFrame(zmLoop);
+}
+function zmHitMarker(){const el=document.getElementById("zmHitmarker");el.classList.remove("show");void el.offsetWidth;el.classList.add("show");}
+function zmDraw(canvas){
+    const c=canvas.getContext("2d"),w=canvas.width,h=canvas.height;
+    c.clearRect(0,0,w,h);
+    const bg=c.createLinearGradient(0,0,0,h);bg.addColorStop(0,"#18251f");bg.addColorStop(.55,"#0c1410");bg.addColorStop(1,"#070b09");c.fillStyle=bg;c.fillRect(0,0,w,h);
+    // atmospheric light
+    const glow=c.createRadialGradient(w*.5,h*.25,10,w*.5,h*.25,430);glow.addColorStop(0,"rgba(170,255,0,.10)");glow.addColorStop(1,"rgba(0,0,0,0)");c.fillStyle=glow;c.fillRect(0,0,w,h);
+    // tactical floor grid
+    c.strokeStyle="rgba(180,220,190,.055)";c.lineWidth=1;
+    for(let x=0;x<w;x+=45){c.beginPath();c.moveTo(x,0);c.lineTo(x,h);c.stroke()}
+    for(let y=0;y<h;y+=45){c.beginPath();c.moveTo(0,y);c.lineTo(w,y);c.stroke()}
+    // floor perspective lines
+    c.strokeStyle="rgba(170,255,0,.08)";for(let x=-500;x<w+500;x+=90){c.beginPath();c.moveTo(w/2,h*.42);c.lineTo(x,h);c.stroke()}
+    // tactical cover with depth
+    [[120,105,105,42],[650,115,120,48],[170,365,150,40],[625,350,110,43],[390,170,120,36]].forEach(o=>{
+        const [x,y,ww,hh]=o;c.fillStyle="#202b25";c.fillRect(x,y,ww,hh);c.fillStyle="rgba(255,255,255,.07)";c.fillRect(x,y,ww,5);c.fillStyle="#0a0e0c";c.fillRect(x+7,y+hh,ww-14,7);c.strokeStyle="#526158";c.strokeRect(x,y,ww,hh);
+        c.fillStyle="rgba(170,255,0,.09)";c.fillRect(x+10,y+10,ww-20,2);
+    });
+    // small lights
+    for(let x=55;x<w;x+=180){c.fillStyle="rgba(170,255,0,.28)";c.beginPath();c.arc(x,28,3,0,Math.PI*2);c.fill()}
+    for(const s of zmShots){c.fillStyle="#f2ffd2";c.shadowColor="#aaff00";c.shadowBlur=10;c.beginPath();c.arc(s.x,s.y,3.5,0,Math.PI*2);c.fill();c.shadowBlur=0}
+    for(const b of zmBotsList){if(!b.alive)continue;zmDrawBot(c,b)}
+    zmDrawPlayer(c);
+}
+function zmDrawBot(c,b){
+    c.save();c.translate(b.x,b.y);c.fillStyle="rgba(0,0,0,.45)";c.beginPath();c.ellipse(0,23,28,9,0,0,Math.PI*2);c.fill();
+    // legs
+    c.fillStyle="#171c1a";c.fillRect(-18,7,10,23);c.fillRect(8,7,10,23);
+    // armored body
+    const body=c.createLinearGradient(-16,-7,16,25);body.addColorStop(0,"#68747a");body.addColorStop(1,"#293136");c.fillStyle=body;c.fillRect(-15,-6,30,30);c.strokeStyle="#9aa4a8";c.strokeRect(-15,-6,30,30);
+    c.fillStyle="#20272b";c.fillRect(-19,-17,38,17);c.fillStyle="#f04d55";c.fillRect(-12,-12,24,5);c.fillStyle="#8b969c";c.fillRect(-22,7,7,9);c.fillRect(15,7,7,9);
+    c.fillStyle="#a9b2b6";c.fillRect(-9,0,18,4);c.restore();
+    // health bar
+    c.fillStyle="rgba(0,0,0,.7)";c.fillRect(b.x-25,b.y-37,50,7);c.fillStyle="#ff5b5b";c.fillRect(b.x-24,b.y-36,48*Math.max(0,b.hp/b.maxHp),5);
+}
+function zmDrawPlayer(c){
+    c.save();c.translate(zmPlayer.x,zmPlayer.y);c.rotate(zmPlayer.angle);c.fillStyle="rgba(0,0,0,.45)";c.beginPath();c.ellipse(0,25,29,9,0,0,Math.PI*2);c.fill();
+    c.fillStyle="#171c19";c.fillRect(-19,7,10,24);c.fillRect(9,7,10,24);
+    const suit=c.createLinearGradient(-16,-8,16,25);suit.addColorStop(0,"#caff55");suit.addColorStop(1,"#5c9b0c");c.fillStyle=suit;c.fillRect(-15,-7,30,31);c.strokeStyle="#e4ff9e";c.strokeRect(-15,-7,30,31);
+    c.fillStyle="#1d2520";c.fillRect(-18,-18,36,17);c.fillStyle="#8eeaff";c.fillRect(-11,-13,22,5);c.fillStyle="#d59b70";c.beginPath();c.arc(0,-21,9,0,Math.PI*2);c.fill();
+    // weapon
+    c.fillStyle="#111514";c.fillRect(10,-2,33,7);c.fillStyle="#626d68";c.fillRect(25,-4,12,3);c.fillStyle="#aaff00";c.fillRect(38,-1,5,2);c.restore();
+}
+function endZMStrike(reason){
+    if(!zmRunning)return;zmRunning=false;clearInterval(zmTimer);zmTimer=null;if(zmFrame)cancelAnimationFrame(zmFrame);zmFrame=null;zmMouse.down=false;
+    document.getElementById("zmStrikePlay").classList.add("hidden");document.getElementById("zmStrikeResult").classList.remove("hidden");
+    document.getElementById("zmFinalScore").textContent=zmScore+" POINTS • "+zmBots+" BOTS DOWN";
+    document.getElementById("zmResultMessage").textContent=reason==="MISSION FAILED"?"Your operative was knocked out. Try again and keep moving!":(zmBots>=10?"Elite run! You cleared a whole wave of bots.":"Good match! Improve your aim and movement to beat your score.");
+}
+function stopZMStrike(){zmRunning=false;clearInterval(zmTimer);zmTimer=null;if(zmFrame)cancelAnimationFrame(zmFrame);zmFrame=null;zmResetKeys();}
+function backToZMStrikeMenu(){stopZMStrike();document.getElementById("zmStrikeResult").classList.add("hidden");document.getElementById("zmStrikePlay").classList.add("hidden");document.getElementById("zmStrikeMenu").classList.remove("hidden");}
+
+(function setupZM(){
+    const canvas=document.getElementById("zmCanvas");
+    canvas.addEventListener("pointermove",e=>{const r=canvas.getBoundingClientRect();zmMouse.x=e.clientX-r.left;zmMouse.y=e.clientY-r.top;});
+    canvas.addEventListener("pointerdown",e=>{e.preventDefault();zmMouse.down=true;zmShoot();});
+    window.addEventListener("pointerup",()=>zmMouse.down=false);
+    window.addEventListener("keydown",e=>{if(!zmRunning)return;if(e.code==="KeyW"||e.code==="ArrowUp")zmKeys.up=true;if(e.code==="KeyS"||e.code==="ArrowDown")zmKeys.down=true;if(e.code==="KeyA"||e.code==="ArrowLeft")zmKeys.left=true;if(e.code==="KeyD"||e.code==="ArrowRight")zmKeys.right=true;if(e.code==="KeyR")zmReload();});
+    window.addEventListener("keyup",e=>{if(e.code==="KeyW"||e.code==="ArrowUp")zmKeys.up=false;if(e.code==="KeyS"||e.code==="ArrowDown")zmKeys.down=false;if(e.code==="KeyA"||e.code==="ArrowLeft")zmKeys.left=false;if(e.code==="KeyD"||e.code==="ArrowRight")zmKeys.right=false;});
+})();
+
+</script>
+<script type="module" src="auth.js"></script>
+</body>
+</html>
+<!-- FOOTER -->
+
+<footer>
+  <div><b>ZAYN & MIKE</b> © 2026</div>
