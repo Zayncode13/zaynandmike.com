@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="C:\Users\ALOKO\Desktop\Vscode book\Zayn and Mike\z&m icon 3.png">
+    <title>Create Account | Zayn & Mike</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #050505;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .signup-box {
+            width: 100%;
+            max-width: 420px;
+            margin: 20px;
+            padding: 35px;
+            background: #101010;
+            border: 1px solid rgba(182, 255, 0, 0.35);
+            border-radius: 18px;
+            box-shadow: 0 0 35px rgba(182, 255, 0, 0.12);
+        }
+
+        .signup-title {
+            margin: 0;
+            text-align: center;
+            color: #b6ff00;
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        .signup-subtitle {
+            margin: 8px 0 28px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ddd;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background: #080808;
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #b6ff00;
+            box-shadow: 0 0 0 3px rgba(182, 255, 0, 0.1);
+        }
+
+        input::placeholder {
+            color: #666;
+        }
+
+        .signup-button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 10px;
+            background: #b6ff00;
+            color: #050505;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .signup-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 20px rgba(182, 255, 0, 0.25);
+        }
+
+        #message {
+            min-height: 20px;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .login-link {
+            margin-top: 22px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #b6ff00;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-box">
+
+        <h1 class="signup-title">Create Account</h1>
+
+        <p class="signup-subtitle">
+            Join Zayn &amp; Mike
+        </p>
+
+        <form id="signupForm">
+
+            <div class="form-group">
+                <label for="username">Username</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Choose a username"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+ <div class="form-group">
+    <label for="email">Email</label>
+    <input
+        type="email"
+        id="email"
+        placeholder="Enter your email"
+        autocomplete="email"
+        required
+    >
+</div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create a password"
+                    autocomplete="new-password"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Enter your password again"
+                    autocomplete="new-password"
+                    required
+                >
+            </div>
+
+            <button class="signup-button" type="submit">
+                Create Account
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="C:/Users/ALOKO/Desktop/Vscode book/xzaynmike.html">Sign In</a>
+        </div>
+
+    </div>
+l
+<script type="module">
+
+    import {
+        initializeApp
+    } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+
+    import {
+        getAuth,
+        createUserWithEmailAndPassword
+    } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+
+
+    /* Firebase configuration */
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAg1mUK15mtqLqUc0QhDQ0m1xinu89-ixY",
+        authDomain: "zayn-and-mike.firebaseapp.com",
+        projectId: "zayn-and-mike",
+        storageBucket: "zayn-and-mike.firebasestorage.app",
+        messagingSenderId: "828342529884",
+        appId: "1:828342529884:web:edcef0839a640ad8869b99"
+    };
+
+
+    /* Start Firebase */
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+
+    /* Get form */
+
+    const signupForm =
+        document.getElementById("signupForm");
+
+    const message =
+        document.getElementById("message");
+
+
+    /* Create account */
+
+    signupForm.addEventListener("submit", async function(event) {
+
+        event.preventDefault();
+
+
+        const username =
+            document.getElementById("username").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const password =
+            document.getElementById("password").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+
+        /* Check username */
+
+        if (username === "") {
+
+            message.style.color = "#ff5252";
+            message.textContent =
+                "Please enter a username.";
+
+            return;
+        }
+
+
+        /* Check email */
+
+        if (email === "") {
+
+            message.style.color = "#ff5252";
+            message.textContent =
+                "Please enter your email.";
+
+            return;
+        }
+
+
+        /* Check password */
+
+        if (password.length < 6) {
+
+            message.style.color = "#ff5252";
+            message.textContent =
+                "Password must be at least 6 characters.";
+
+            return;
+        }
+
+
+        /* Check passwords */
+
+        if (password !== confirmPassword) {
+
+            message.style.color = "#ff5252";
+            message.textContent =
+                "Passwords do not match.";
+
+            return;
+        }
+
+
+        /* Show loading message */
+
+        message.style.color = "#b6ff00";
+        message.textContent =
+            "Creating your account...";
+
+
+        try {
+
+            /* Create Firebase account */
+
+            const userCredential =
+                await createUserWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+
+            const user =
+                userCredential.user;
+
+
+            /*
+                Save the username locally.
+
+                Firebase handles the real authentication.
+                localStorage only remembers the
+                username for the website navbar.
+            */
+
+            localStorage.setItem(
+                "loggedInUser",
+                username
+            );
+
+
+            localStorage.setItem(
+                "firebaseUserId",
+                user.uid
+            );
+
+
+            /* Success */
+
+            message.style.color = "#b6ff00";
+
+            message.textContent =
+                "✓ Account created successfully!";
+
+
+            /* Go to website */
+
+            setTimeout(function() {
+
+                window.location.href =
+                    "xzaynmike.html";
+
+            }, 1000);
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            message.style.color = "#ff5252";
+
+
+            if (error.code === "auth/email-already-in-use") {
+
+                message.textContent =
+                    "That email is already registered.";
+
+            } else if (error.code === "auth/invalid-email") {
+
+                message.textContent =
+                    "Please enter a valid email.";
+
+            } else if (error.code === "auth/weak-password") {
+
+                message.textContent =
+                    "Password must be at least 6 characters.";
+
+            } else {
+
+                message.textContent =
+                    "Could not create account. Please try again.";
+
+            }
+
+        }
+
+    });
+
+</script>
+<script type="module" src="auth.js"></script>
+
+</div>
+</body>
+</html>
